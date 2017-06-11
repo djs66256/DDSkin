@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		652107971EEC59C9004F06FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107961EEC59C9004F06FF /* main.m */; };
+		6521079A1EEC59C9004F06FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107991EEC59C9004F06FF /* AppDelegate.m */; };
+		6521079D1EEC59C9004F06FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521079C1EEC59C9004F06FF /* ViewController.m */; };
+		652107A01EEC59C9004F06FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6521079E1EEC59C9004F06FF /* Main.storyboard */; };
+		652107A21EEC59C9004F06FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652107A11EEC59C9004F06FF /* Assets.xcassets */; };
+		652107A51EEC59C9004F06FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652107A31EEC59C9004F06FF /* LaunchScreen.storyboard */; };
+		652107B51EEC59E0004F06FF /* DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107B31EEC59E0004F06FF /* DDSkin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		652107B81EEC59E0004F06FF /* DDSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652107B11EEC59E0004F06FF /* DDSkin.framework */; };
+		652107B91EEC59E0004F06FF /* DDSkin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 652107B11EEC59E0004F06FF /* DDSkin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		652107D11EEC624C004F06FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652107D01EEC624C004F06FF /* Foundation.framework */; };
+		652107D31EEC6251004F06FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652107D21EEC6251004F06FF /* UIKit.framework */; };
+		652108001EED3B05004F06FF /* DDSkinDefaultStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F21EED3B05004F06FF /* DDSkinDefaultStorage.h */; };
+		652108011EED3B05004F06FF /* DDSkinDefaultStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107F31EED3B05004F06FF /* DDSkinDefaultStorage.m */; };
+		652108021EED3B05004F06FF /* DDSkinCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F41EED3B05004F06FF /* DDSkinCore.h */; };
+		652108031EED3B05004F06FF /* DDSkinCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107F51EED3B05004F06FF /* DDSkinCore.m */; };
+		652108041EED3B05004F06FF /* DDSkinHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F61EED3B05004F06FF /* DDSkinHandler.h */; };
+		652108051EED3B05004F06FF /* DDSkinHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107F71EED3B05004F06FF /* DDSkinHandler.m */; };
+		652108061EED3B05004F06FF /* DDSkinMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F81EED3B05004F06FF /* DDSkinMacros.h */; };
+		652108071EED3B05004F06FF /* DDSkinManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F91EED3B05004F06FF /* DDSkinManager.h */; };
+		652108081EED3B05004F06FF /* DDSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107FA1EED3B05004F06FF /* DDSkinManager.m */; };
+		652108091EED3B05004F06FF /* DDSkinStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107FB1EED3B05004F06FF /* DDSkinStorage.h */; };
+		6521080A1EED3B05004F06FF /* DDSkinStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107FC1EED3B05004F06FF /* DDSkinStorage.m */; };
+		6521080B1EED3B05004F06FF /* UIView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107FE1EED3B05004F06FF /* UIView+DDSkin.h */; };
+		6521080C1EED3B05004F06FF /* UIView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107FF1EED3B05004F06FF /* UIView+DDSkin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		652107B61EEC59E0004F06FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6521078A1EEC59C9004F06FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 652107B01EEC59E0004F06FF;
+			remoteInfo = DDSkin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		652107BD1EEC59E0004F06FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				652107B91EEC59E0004F06FF /* DDSkin.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		652107921EEC59C9004F06FF /* DDSkinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDSkinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		652107961EEC59C9004F06FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		652107981EEC59C9004F06FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		652107991EEC59C9004F06FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6521079B1EEC59C9004F06FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6521079C1EEC59C9004F06FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6521079F1EEC59C9004F06FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		652107A11EEC59C9004F06FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		652107A41EEC59C9004F06FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		652107A61EEC59C9004F06FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652107B11EEC59E0004F06FF /* DDSkin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DDSkin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		652107B31EEC59E0004F06FF /* DDSkin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSkin.h; sourceTree = "<group>"; };
+		652107B41EEC59E0004F06FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652107D01EEC624C004F06FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		652107D21EEC6251004F06FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		652107F21EED3B05004F06FF /* DDSkinDefaultStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinDefaultStorage.h; sourceTree = "<group>"; };
+		652107F31EED3B05004F06FF /* DDSkinDefaultStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinDefaultStorage.m; sourceTree = "<group>"; };
+		652107F41EED3B05004F06FF /* DDSkinCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinCore.h; sourceTree = "<group>"; };
+		652107F51EED3B05004F06FF /* DDSkinCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinCore.m; sourceTree = "<group>"; };
+		652107F61EED3B05004F06FF /* DDSkinHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinHandler.h; sourceTree = "<group>"; };
+		652107F71EED3B05004F06FF /* DDSkinHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinHandler.m; sourceTree = "<group>"; };
+		652107F81EED3B05004F06FF /* DDSkinMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinMacros.h; sourceTree = "<group>"; };
+		652107F91EED3B05004F06FF /* DDSkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinManager.h; sourceTree = "<group>"; };
+		652107FA1EED3B05004F06FF /* DDSkinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinManager.m; sourceTree = "<group>"; };
+		652107FB1EED3B05004F06FF /* DDSkinStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinStorage.h; sourceTree = "<group>"; };
+		652107FC1EED3B05004F06FF /* DDSkinStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinStorage.m; sourceTree = "<group>"; };
+		652107FE1EED3B05004F06FF /* UIView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDSkin.h"; sourceTree = "<group>"; };
+		652107FF1EED3B05004F06FF /* UIView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDSkin.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6521078F1EEC59C9004F06FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652107B81EEC59E0004F06FF /* DDSkin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652107AD1EEC59E0004F06FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652107D31EEC6251004F06FF /* UIKit.framework in Frameworks */,
+				652107D11EEC624C004F06FF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		652107891EEC59C9004F06FF = {
+			isa = PBXGroup;
+			children = (
+				652107F11EED3B05004F06FF /* Classes */,
+				652107941EEC59C9004F06FF /* DDSkinDemo */,
+				652107B21EEC59E0004F06FF /* DDSkin */,
+				652107931EEC59C9004F06FF /* Products */,
+				652107CF1EEC624C004F06FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		652107931EEC59C9004F06FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				652107921EEC59C9004F06FF /* DDSkinDemo.app */,
+				652107B11EEC59E0004F06FF /* DDSkin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		652107941EEC59C9004F06FF /* DDSkinDemo */ = {
+			isa = PBXGroup;
+			children = (
+				652107981EEC59C9004F06FF /* AppDelegate.h */,
+				652107991EEC59C9004F06FF /* AppDelegate.m */,
+				6521079B1EEC59C9004F06FF /* ViewController.h */,
+				6521079C1EEC59C9004F06FF /* ViewController.m */,
+				6521079E1EEC59C9004F06FF /* Main.storyboard */,
+				652107A11EEC59C9004F06FF /* Assets.xcassets */,
+				652107A31EEC59C9004F06FF /* LaunchScreen.storyboard */,
+				652107A61EEC59C9004F06FF /* Info.plist */,
+				652107951EEC59C9004F06FF /* Supporting Files */,
+			);
+			path = DDSkinDemo;
+			sourceTree = "<group>";
+		};
+		652107951EEC59C9004F06FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				652107961EEC59C9004F06FF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		652107B21EEC59E0004F06FF /* DDSkin */ = {
+			isa = PBXGroup;
+			children = (
+				652107B31EEC59E0004F06FF /* DDSkin.h */,
+				652107B41EEC59E0004F06FF /* Info.plist */,
+			);
+			path = DDSkin;
+			sourceTree = "<group>";
+		};
+		652107CF1EEC624C004F06FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				652107D21EEC6251004F06FF /* UIKit.framework */,
+				652107D01EEC624C004F06FF /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		652107F11EED3B05004F06FF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				652107F21EED3B05004F06FF /* DDSkinDefaultStorage.h */,
+				652107F31EED3B05004F06FF /* DDSkinDefaultStorage.m */,
+				652107F41EED3B05004F06FF /* DDSkinCore.h */,
+				652107F51EED3B05004F06FF /* DDSkinCore.m */,
+				652107F61EED3B05004F06FF /* DDSkinHandler.h */,
+				652107F71EED3B05004F06FF /* DDSkinHandler.m */,
+				652107F81EED3B05004F06FF /* DDSkinMacros.h */,
+				652107F91EED3B05004F06FF /* DDSkinManager.h */,
+				652107FA1EED3B05004F06FF /* DDSkinManager.m */,
+				652107FB1EED3B05004F06FF /* DDSkinStorage.h */,
+				652107FC1EED3B05004F06FF /* DDSkinStorage.m */,
+				652107FD1EED3B05004F06FF /* UIKit */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		652107FD1EED3B05004F06FF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				652107FE1EED3B05004F06FF /* UIView+DDSkin.h */,
+				652107FF1EED3B05004F06FF /* UIView+DDSkin.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		652107AE1EEC59E0004F06FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652108041EED3B05004F06FF /* DDSkinHandler.h in Headers */,
+				652107B51EEC59E0004F06FF /* DDSkin.h in Headers */,
+				652108091EED3B05004F06FF /* DDSkinStorage.h in Headers */,
+				652108061EED3B05004F06FF /* DDSkinMacros.h in Headers */,
+				652108001EED3B05004F06FF /* DDSkinDefaultStorage.h in Headers */,
+				652108021EED3B05004F06FF /* DDSkinCore.h in Headers */,
+				6521080B1EED3B05004F06FF /* UIView+DDSkin.h in Headers */,
+				652108071EED3B05004F06FF /* DDSkinManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		652107911EEC59C9004F06FF /* DDSkinDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652107A91EEC59C9004F06FF /* Build configuration list for PBXNativeTarget "DDSkinDemo" */;
+			buildPhases = (
+				6521078E1EEC59C9004F06FF /* Sources */,
+				6521078F1EEC59C9004F06FF /* Frameworks */,
+				652107901EEC59C9004F06FF /* Resources */,
+				652107BD1EEC59E0004F06FF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				652107B71EEC59E0004F06FF /* PBXTargetDependency */,
+			);
+			name = DDSkinDemo;
+			productName = DDSkinDemo;
+			productReference = 652107921EEC59C9004F06FF /* DDSkinDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		652107B01EEC59E0004F06FF /* DDSkin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 652107BC1EEC59E0004F06FF /* Build configuration list for PBXNativeTarget "DDSkin" */;
+			buildPhases = (
+				652107AC1EEC59E0004F06FF /* Sources */,
+				652107AD1EEC59E0004F06FF /* Frameworks */,
+				652107AE1EEC59E0004F06FF /* Headers */,
+				652107AF1EEC59E0004F06FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDSkin;
+			productName = DDSkin;
+			productReference = 652107B11EEC59E0004F06FF /* DDSkin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6521078A1EEC59C9004F06FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Daniel;
+				TargetAttributes = {
+					652107911EEC59C9004F06FF = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					652107B01EEC59E0004F06FF = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6521078D1EEC59C9004F06FF /* Build configuration list for PBXProject "DDSkinDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 652107891EEC59C9004F06FF;
+			productRefGroup = 652107931EEC59C9004F06FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				652107911EEC59C9004F06FF /* DDSkinDemo */,
+				652107B01EEC59E0004F06FF /* DDSkin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		652107901EEC59C9004F06FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652107A51EEC59C9004F06FF /* LaunchScreen.storyboard in Resources */,
+				652107A21EEC59C9004F06FF /* Assets.xcassets in Resources */,
+				652107A01EEC59C9004F06FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652107AF1EEC59E0004F06FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6521078E1EEC59C9004F06FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6521079D1EEC59C9004F06FF /* ViewController.m in Sources */,
+				6521079A1EEC59C9004F06FF /* AppDelegate.m in Sources */,
+				652107971EEC59C9004F06FF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		652107AC1EEC59E0004F06FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652108031EED3B05004F06FF /* DDSkinCore.m in Sources */,
+				652108051EED3B05004F06FF /* DDSkinHandler.m in Sources */,
+				6521080A1EED3B05004F06FF /* DDSkinStorage.m in Sources */,
+				6521080C1EED3B05004F06FF /* UIView+DDSkin.m in Sources */,
+				652108081EED3B05004F06FF /* DDSkinManager.m in Sources */,
+				652108011EED3B05004F06FF /* DDSkinDefaultStorage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		652107B71EEC59E0004F06FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 652107B01EEC59E0004F06FF /* DDSkin */;
+			targetProxy = 652107B61EEC59E0004F06FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6521079E1EEC59C9004F06FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6521079F1EEC59C9004F06FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		652107A31EEC59C9004F06FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				652107A41EEC59C9004F06FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		652107A71EEC59C9004F06FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		652107A81EEC59C9004F06FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		652107AA1EEC59C9004F06FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DDSkinDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDSkinDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		652107AB1EEC59C9004F06FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DDSkinDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDSkinDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		652107BA1EEC59E0004F06FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DDSkin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDSkin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		652107BB1EEC59E0004F06FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DDSkin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.djs66256.DDSkin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6521078D1EEC59C9004F06FF /* Build configuration list for PBXProject "DDSkinDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652107A71EEC59C9004F06FF /* Debug */,
+				652107A81EEC59C9004F06FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652107A91EEC59C9004F06FF /* Build configuration list for PBXNativeTarget "DDSkinDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652107AA1EEC59C9004F06FF /* Debug */,
+				652107AB1EEC59C9004F06FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		652107BC1EEC59E0004F06FF /* Build configuration list for PBXNativeTarget "DDSkin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652107BA1EEC59E0004F06FF /* Debug */,
+				652107BB1EEC59E0004F06FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6521078A1EEC59C9004F06FF /* Project object */;
+}
