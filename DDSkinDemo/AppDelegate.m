@@ -8,36 +8,51 @@
 
 #import "AppDelegate.h"
 #import "DDSkinDefaultStorage.h"
-#import "DDSkinHandle.h"
+#import "DDSkinManager.h"
+#import "DDSkinDefaultStorageParser.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <DDSkinDefaultStorageParserDelegate>
+@property (strong, nonatomic) NSArray<DDSkinStorage *> *storages;
+@property (assign, nonatomic) NSInteger index;
+@property (strong, nonatomic) NSTimer *timer;
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    NSDictionary *dict = @{@"colors":@{
-                                   @"red": [UIColor redColor],
-                                   @"green": [UIColor greenColor],
-                                   }};
-    DDSkinDefaultStorage *storage = [[DDSkinDefaultStorage alloc] initWithConfig:dict];
-    DDSkinSetCurrentStorage(storage);
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSDictionary *dict = @{@"colors":@{
-                                       @"red": [UIColor greenColor],
-                                       @"green": [UIColor redColor],
-                                       }};
-        DDSkinDefaultStorage *storage = [[DDSkinDefaultStorage alloc] initWithConfig:dict];
-        DDSkinSetCurrentStorage(storage);
-    });
+    self.storages = @[[self storageWithName:@"day"], [self storageWithName:@"night"]];
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
     
     return YES;
 }
 
+- (DDSkinStorage *)storageWithName:(NSString *)name {
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:@"plist"]];
+    DDSkinDefaultStorageParser *parser = [[DDSkinDefaultStorageParser alloc] initWithDictionary:dict];
+    parser.delegate = self;
+    [parser parse];
+    
+    return parser.skinStorage;
+}
+
+- (DDSkinStorage *)skinDefaultStorageParser:(DDSkinDefaultStorageParser *)parser superStorageWithKey:(NSString *)key value:(NSString *)value {
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:value ofType:@"plist"]];
+    DDSkinDefaultStorageParser *parser1 = [[DDSkinDefaultStorageParser alloc] initWithDictionary:dict];
+    parser1.delegate = self;
+    [parser1 parse];
+    return parser1.skinStorage;
+}
+
+- (void)onTimer:(NSTimer *)timer {
+    [DDSkinManager setCurrentStorage:self.storages[self.index]];
+    
+    self.index ++;
+    if (self.index >= self.storages.count) {
+        self.index = 0;
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

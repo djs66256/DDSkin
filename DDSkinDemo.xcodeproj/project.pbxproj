@@ -18,8 +18,6 @@
 		652107B91EEC59E0004F06FF /* DDSkin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 652107B11EEC59E0004F06FF /* DDSkin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		652107D11EEC624C004F06FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652107D01EEC624C004F06FF /* Foundation.framework */; };
 		652107D31EEC6251004F06FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652107D21EEC6251004F06FF /* UIKit.framework */; };
-		652108001EED3B05004F06FF /* DDSkinDefaultStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F21EED3B05004F06FF /* DDSkinDefaultStorage.h */; };
-		652108011EED3B05004F06FF /* DDSkinDefaultStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107F31EED3B05004F06FF /* DDSkinDefaultStorage.m */; };
 		652108021EED3B05004F06FF /* DDSkinCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F41EED3B05004F06FF /* DDSkinCore.h */; };
 		652108031EED3B05004F06FF /* DDSkinCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107F51EED3B05004F06FF /* DDSkinCore.m */; };
 		652108041EED3B05004F06FF /* DDSkinHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F61EED3B05004F06FF /* DDSkinHandler.h */; };
@@ -27,10 +25,19 @@
 		652108061EED3B05004F06FF /* DDSkinMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F81EED3B05004F06FF /* DDSkinMacros.h */; };
 		652108071EED3B05004F06FF /* DDSkinManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107F91EED3B05004F06FF /* DDSkinManager.h */; };
 		652108081EED3B05004F06FF /* DDSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107FA1EED3B05004F06FF /* DDSkinManager.m */; };
-		652108091EED3B05004F06FF /* DDSkinStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107FB1EED3B05004F06FF /* DDSkinStorage.h */; };
-		6521080A1EED3B05004F06FF /* DDSkinStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107FC1EED3B05004F06FF /* DDSkinStorage.m */; };
 		6521080B1EED3B05004F06FF /* UIView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652107FE1EED3B05004F06FF /* UIView+DDSkin.h */; };
 		6521080C1EED3B05004F06FF /* UIView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652107FF1EED3B05004F06FF /* UIView+DDSkin.m */; };
+		6521080E1EED9DB5004F06FF /* base.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6521080D1EED9DB5004F06FF /* base.plist */; };
+		652108101EED9DC4004F06FF /* day.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6521080F1EED9DC4004F06FF /* day.plist */; };
+		652108121EED9DCA004F06FF /* night.plist in Resources */ = {isa = PBXBuildFile; fileRef = 652108111EED9DCA004F06FF /* night.plist */; };
+		6521081D1EEDD9D0004F06FF /* DDSkinDefaultStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108171EEDD9D0004F06FF /* DDSkinDefaultStorage.h */; };
+		6521081E1EEDD9D0004F06FF /* DDSkinDefaultStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108181EEDD9D0004F06FF /* DDSkinDefaultStorage.m */; };
+		6521081F1EEDD9D0004F06FF /* DDSkinDefaultStorageParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108191EEDD9D0004F06FF /* DDSkinDefaultStorageParser.h */; };
+		652108201EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521081A1EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m */; };
+		652108211EEDD9D0004F06FF /* DDSkinStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6521081B1EEDD9D0004F06FF /* DDSkinStorage.h */; };
+		652108221EEDD9D0004F06FF /* DDSkinStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521081C1EEDD9D0004F06FF /* DDSkinStorage.m */; };
+		652108251EEDDA19004F06FF /* DDSkinStorageImageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108231EEDDA19004F06FF /* DDSkinStorageImageItem.h */; };
+		652108261EEDDA19004F06FF /* DDSkinStorageImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108241EEDDA19004F06FF /* DDSkinStorageImageItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +80,6 @@
 		652107B41EEC59E0004F06FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		652107D01EEC624C004F06FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		652107D21EEC6251004F06FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		652107F21EED3B05004F06FF /* DDSkinDefaultStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinDefaultStorage.h; sourceTree = "<group>"; };
-		652107F31EED3B05004F06FF /* DDSkinDefaultStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinDefaultStorage.m; sourceTree = "<group>"; };
 		652107F41EED3B05004F06FF /* DDSkinCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinCore.h; sourceTree = "<group>"; };
 		652107F51EED3B05004F06FF /* DDSkinCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinCore.m; sourceTree = "<group>"; };
 		652107F61EED3B05004F06FF /* DDSkinHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinHandler.h; sourceTree = "<group>"; };
@@ -82,10 +87,19 @@
 		652107F81EED3B05004F06FF /* DDSkinMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinMacros.h; sourceTree = "<group>"; };
 		652107F91EED3B05004F06FF /* DDSkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinManager.h; sourceTree = "<group>"; };
 		652107FA1EED3B05004F06FF /* DDSkinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinManager.m; sourceTree = "<group>"; };
-		652107FB1EED3B05004F06FF /* DDSkinStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinStorage.h; sourceTree = "<group>"; };
-		652107FC1EED3B05004F06FF /* DDSkinStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinStorage.m; sourceTree = "<group>"; };
 		652107FE1EED3B05004F06FF /* UIView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDSkin.h"; sourceTree = "<group>"; };
 		652107FF1EED3B05004F06FF /* UIView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDSkin.m"; sourceTree = "<group>"; };
+		6521080D1EED9DB5004F06FF /* base.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = base.plist; sourceTree = "<group>"; };
+		6521080F1EED9DC4004F06FF /* day.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = day.plist; sourceTree = "<group>"; };
+		652108111EED9DCA004F06FF /* night.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = night.plist; sourceTree = "<group>"; };
+		652108171EEDD9D0004F06FF /* DDSkinDefaultStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinDefaultStorage.h; sourceTree = "<group>"; };
+		652108181EEDD9D0004F06FF /* DDSkinDefaultStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinDefaultStorage.m; sourceTree = "<group>"; };
+		652108191EEDD9D0004F06FF /* DDSkinDefaultStorageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinDefaultStorageParser.h; sourceTree = "<group>"; };
+		6521081A1EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinDefaultStorageParser.m; sourceTree = "<group>"; };
+		6521081B1EEDD9D0004F06FF /* DDSkinStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinStorage.h; sourceTree = "<group>"; };
+		6521081C1EEDD9D0004F06FF /* DDSkinStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinStorage.m; sourceTree = "<group>"; };
+		652108231EEDDA19004F06FF /* DDSkinStorageImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinStorageImageItem.h; sourceTree = "<group>"; };
+		652108241EEDDA19004F06FF /* DDSkinStorageImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinStorageImageItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +146,9 @@
 		652107941EEC59C9004F06FF /* DDSkinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6521080D1EED9DB5004F06FF /* base.plist */,
+				6521080F1EED9DC4004F06FF /* day.plist */,
+				652108111EED9DCA004F06FF /* night.plist */,
 				652107981EEC59C9004F06FF /* AppDelegate.h */,
 				652107991EEC59C9004F06FF /* AppDelegate.m */,
 				6521079B1EEC59C9004F06FF /* ViewController.h */,
@@ -174,8 +191,6 @@
 		652107F11EED3B05004F06FF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				652107F21EED3B05004F06FF /* DDSkinDefaultStorage.h */,
-				652107F31EED3B05004F06FF /* DDSkinDefaultStorage.m */,
 				652107F41EED3B05004F06FF /* DDSkinCore.h */,
 				652107F51EED3B05004F06FF /* DDSkinCore.m */,
 				652107F61EED3B05004F06FF /* DDSkinHandler.h */,
@@ -183,8 +198,7 @@
 				652107F81EED3B05004F06FF /* DDSkinMacros.h */,
 				652107F91EED3B05004F06FF /* DDSkinManager.h */,
 				652107FA1EED3B05004F06FF /* DDSkinManager.m */,
-				652107FB1EED3B05004F06FF /* DDSkinStorage.h */,
-				652107FC1EED3B05004F06FF /* DDSkinStorage.m */,
+				652108161EEDD9D0004F06FF /* Model */,
 				652107FD1EED3B05004F06FF /* UIKit */,
 			);
 			path = Classes;
@@ -199,6 +213,21 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		652108161EEDD9D0004F06FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				652108171EEDD9D0004F06FF /* DDSkinDefaultStorage.h */,
+				652108181EEDD9D0004F06FF /* DDSkinDefaultStorage.m */,
+				652108191EEDD9D0004F06FF /* DDSkinDefaultStorageParser.h */,
+				6521081A1EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m */,
+				6521081B1EEDD9D0004F06FF /* DDSkinStorage.h */,
+				6521081C1EEDD9D0004F06FF /* DDSkinStorage.m */,
+				652108231EEDDA19004F06FF /* DDSkinStorageImageItem.h */,
+				652108241EEDDA19004F06FF /* DDSkinStorageImageItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -206,14 +235,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6521081F1EEDD9D0004F06FF /* DDSkinDefaultStorageParser.h in Headers */,
 				652108041EED3B05004F06FF /* DDSkinHandler.h in Headers */,
 				652107B51EEC59E0004F06FF /* DDSkin.h in Headers */,
-				652108091EED3B05004F06FF /* DDSkinStorage.h in Headers */,
 				652108061EED3B05004F06FF /* DDSkinMacros.h in Headers */,
-				652108001EED3B05004F06FF /* DDSkinDefaultStorage.h in Headers */,
+				652108251EEDDA19004F06FF /* DDSkinStorageImageItem.h in Headers */,
 				652108021EED3B05004F06FF /* DDSkinCore.h in Headers */,
 				6521080B1EED3B05004F06FF /* UIView+DDSkin.h in Headers */,
+				652108211EEDD9D0004F06FF /* DDSkinStorage.h in Headers */,
 				652108071EED3B05004F06FF /* DDSkinManager.h in Headers */,
+				6521081D1EEDD9D0004F06FF /* DDSkinDefaultStorage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +332,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				652107A51EEC59C9004F06FF /* LaunchScreen.storyboard in Resources */,
+				652108121EED9DCA004F06FF /* night.plist in Resources */,
+				652108101EED9DC4004F06FF /* day.plist in Resources */,
 				652107A21EEC59C9004F06FF /* Assets.xcassets in Resources */,
 				652107A01EEC59C9004F06FF /* Main.storyboard in Resources */,
+				6521080E1EED9DB5004F06FF /* base.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,10 +366,12 @@
 			files = (
 				652108031EED3B05004F06FF /* DDSkinCore.m in Sources */,
 				652108051EED3B05004F06FF /* DDSkinHandler.m in Sources */,
-				6521080A1EED3B05004F06FF /* DDSkinStorage.m in Sources */,
+				6521081E1EEDD9D0004F06FF /* DDSkinDefaultStorage.m in Sources */,
+				652108201EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m in Sources */,
 				6521080C1EED3B05004F06FF /* UIView+DDSkin.m in Sources */,
 				652108081EED3B05004F06FF /* DDSkinManager.m in Sources */,
-				652108011EED3B05004F06FF /* DDSkinDefaultStorage.m in Sources */,
+				652108221EEDD9D0004F06FF /* DDSkinStorage.m in Sources */,
+				652108261EEDDA19004F06FF /* DDSkinStorageImageItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

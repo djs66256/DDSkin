@@ -26,6 +26,4 @@
 
 @property (strong, nonatomic) DDSkinStorage *superStorage;
 
-+ (instancetype)defaultStorage;
-
 @end
