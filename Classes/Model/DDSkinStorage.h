@@ -19,6 +19,7 @@
 - (NSNumber *)numberForKey:(NSString *)key;
 - (UIFont *)fontForKey:(NSString *)key;
 - (BOOL)booleanForKey:(NSString *)key;
+- (CGSize)sizeForKey:(NSString *)size;
 
 @end
 

@@ -16,6 +16,11 @@
     NSDictionary<NSString *, NSURL *>       *_urls;
     NSDictionary<NSString *, NSObject *>    *_objects;
     NSDictionary<NSString *, DDSkinStorageImageItem *> *_images;
+    
+    NSDictionary<NSString *, NSNumber *>    *_numbers;
+    NSDictionary<NSString *, NSNumber *>    *_booleans;
+    NSDictionary<NSString *, UIFont *>      *_fonts;
+    NSDictionary<NSString *, NSValue *>     *_sizes;
 }
 
 #define DDSkinIsCurrentStorage(self) \
@@ -53,6 +58,22 @@
 - (void)setObjectsDictionary:(NSDictionary<NSString *, NSObject *> *)objects {
     DDSkinAssertCurrentStorage();
     _objects = objects.copy;
+}
+- (void)setNumbersDictionary:(NSDictionary<NSString *, NSNumber *> *)numbers {
+    DDSkinAssertCurrentStorage();
+    _numbers = numbers.copy;
+}
+- (void)setBooleanDictionary:(NSDictionary<NSString *, NSNumber *> *)booleans {
+    DDSkinAssertCurrentStorage();
+    _booleans = booleans.copy;
+}
+- (void)setFontDictionary:(NSDictionary<NSString *, UIFont *> *)fonts {
+    DDSkinAssertCurrentStorage();
+    _fonts = fonts.copy;
+}
+- (void)setSizeDictionary:(NSDictionary<NSString *, NSValue *> *)sizes {
+    DDSkinAssertCurrentStorage();
+    _sizes = sizes.copy;
 }
 
 - (NSObject *)objectForKey:(NSString *)key {

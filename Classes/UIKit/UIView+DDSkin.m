@@ -7,7 +7,7 @@
 //
 
 #import "UIView+DDSkin.h"
-#import "DDSkinMacros.h"
+#import "DDSkinUIMacros.h"
 #import "DDSkinCore.h"
 
 @implementation UIView (DDSkin)

@@ -13,6 +13,10 @@ typedef NS_ENUM(NSInteger, DDSkinHandlerKeyPathValueType) {
     DDSkinHandlerKeyPathValueTypeColor,
     DDSkinHandlerKeyPathValueTypeString,
     DDSkinHandlerKeyPathValueTypeUrl,
+    DDSkinHandlerKeyPathValueTypeNumber,
+    DDSkinHandlerKeyPathValueTypeBoolean,
+    DDSkinHandlerKeyPathValueTypeImage,
+    DDSkinHandlerKeyPathValueTypeSize,
     DDSkinHandlerKeyPathValueTypeObject,
 };
 

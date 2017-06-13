@@ -21,5 +21,6 @@
 - (void)setNumbersDictionary:(NSDictionary<NSString *, NSNumber *> *)numbers;
 - (void)setBooleanDictionary:(NSDictionary<NSString *, NSNumber *> *)booleans;
 - (void)setFontDictionary:(NSDictionary<NSString *, UIFont *> *)fonts;
+- (void)setSizeDictionary:(NSDictionary<NSString *, NSValue *> *)sizes;
 
 @end
