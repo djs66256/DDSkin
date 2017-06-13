@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "DDSkinStorage.h"
+#import "DDSkinStorageImageItem.h"
+#import "DDSkinMacros.h"
+
+DDExtern NSString * const DDSkinDefaultStorageSuperKey;      // super
+DDExtern NSString * const DDSkinDefaultStorageColorsKey;     // color
+DDExtern NSString * const DDSkinDefaultStorageStringsKey;    // string
+DDExtern NSString * const DDSkinDefaultStorageUrlsKey;       // url
+DDExtern NSString * const DDSkinDefaultStorageNumbersKey;    // numbers
+DDExtern NSString * const DDSkinDefaultStorageObjectsKey;    // object
+DDExtern NSString * const DDSkinDefaultStorageImagesKey;     // image
+DDExtern NSString * const DDSkinDefaultStorageBooleansKey;   // bool
+DDExtern NSString * const DDSkinDefaultStorageFontsKey;      // font
 
 @protocol DDSkinDefaultStorageParserDelegate;
 @interface DDSkinDefaultStorageParser : NSObject
@@ -26,9 +38,9 @@
 - (DDSkinStorage *)skinDefaultStorageParser:(DDSkinDefaultStorageParser *)parser
                         superStorageWithKey:(NSString *)key
                                       value:(NSString *)value;
-- (UIImage *)skinDefaultStorageParser:(DDSkinDefaultStorageParser *)parser
-                         imageWithKey:(NSString *)key
-                                value:(NSString *)value;
+- (DDSkinStorageImageItem *)skinDefaultStorageParser:(DDSkinDefaultStorageParser *)parser
+                                        imageWithKey:(NSString *)key
+                                               value:(NSString *)value;
 - (UIColor *)skinDefaultStorageParser:(DDSkinDefaultStorageParser *)parser
                          colorWithKey:(NSString *)key
                                 value:(NSString *)value;
@@ -46,7 +58,7 @@
                               value:(NSString *)value;
 - (UIFont *)skinDefaultStorageParser:(DDSkinDefaultStorageParser *)parser
                          fontWithKey:(NSString *)key
-                               value:(NSString *)value;
+                               value:(id)value;
 
 - (void)skinDefaultStorageParserDidFinish:(DDSkinDefaultStorageParser *)parser;
 

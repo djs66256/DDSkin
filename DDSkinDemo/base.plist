@@ -11,9 +11,17 @@
 	<key>urls</key>
 	<dict/>
 	<key>numbers</key>
-	<dict/>
+	<dict>
+		<key>separator</key>
+		<string>1</string>
+	</dict>
 	<key>fonts</key>
-	<dict/>
+	<dict>
+		<key>content</key>
+		<string>15</string>
+		<key>title</key>
+		<string>17</string>
+	</dict>
 	<key>colors</key>
 	<dict>
 		<key>red</key>

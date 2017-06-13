@@ -10,13 +10,6 @@
 #import "DDSkinMacros.h"
 #import "DDSkinStorageImageItem.h"
 
-DDExtern NSString * const DDSkinDefaultStorageSuperKey;     // super
-DDExtern NSString * const DDSkinDefaultStorageColorsKey;     // color
-DDExtern NSString * const DDSkinDefaultStorageStringsKey;    // string
-DDExtern NSString * const DDSkinDefaultStorageUrlsKey;       // url
-DDExtern NSString * const DDSkinDefaultStorageObjectsKey;    // object
-DDExtern NSString * const DDSkinDefaultStorageImagesKey;     // image
-
 
 @interface DDSkinDefaultStorage : DDSkinStorage
 
@@ -25,5 +18,8 @@ DDExtern NSString * const DDSkinDefaultStorageImagesKey;     // image
 - (void)setUrlsDictionary:(NSDictionary<NSString *, NSURL *> *)url;
 - (void)setImagesDictionary:(NSDictionary<NSString *, DDSkinStorageImageItem *> *)images;
 - (void)setObjectsDictionary:(NSDictionary<NSString *, NSObject *> *)objects;
+- (void)setNumbersDictionary:(NSDictionary<NSString *, NSNumber *> *)numbers;
+- (void)setBooleanDictionary:(NSDictionary<NSString *, NSNumber *> *)booleans;
+- (void)setFontDictionary:(NSDictionary<NSString *, UIFont *> *)fonts;
 
 @end

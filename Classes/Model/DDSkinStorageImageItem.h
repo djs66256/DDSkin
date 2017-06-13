@@ -15,5 +15,10 @@
 
 
 @interface DDSkinStorageImageItem : NSObject <DDSkinStorageItemLazyLoad>
+
 - (UIImage *)value;
+
++ (instancetype)bundleImageWithName:(NSString *)name bundle:(NSBundle *)bundle;
++ (instancetype)localImageWithPath:(NSString *)path basePath:(NSString *)basePath;
+
 @end

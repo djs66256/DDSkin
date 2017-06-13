@@ -8,84 +8,23 @@
 
 #import "DDSkinDefaultStorageParser.h"
 #import "DDSkinDefaultStorage.h"
+#import "DDSkinStorageParserHelper.h"
+
+NSString * const DDSkinDefaultStorageSuperKey   = @"super";     // super
+NSString * const DDSkinDefaultStorageColorsKey  = @"colors";     // color
+NSString * const DDSkinDefaultStorageStringsKey = @"strings";    // string
+NSString * const DDSkinDefaultStorageUrlsKey    = @"urls";       // url
+NSString * const DDSkinDefaultStorageNumbersKey = @"numbers";       // numbers
+NSString * const DDSkinDefaultStorageObjectsKey = @"objects";    // object
+NSString * const DDSkinDefaultStorageImagesKey  = @"images";     // image
+NSString * const DDSkinDefaultStorageBooleansKey= @"booleans";   // bool
+NSString * const DDSkinDefaultStorageFontsKey   = @"fonts";      // font
+
 
 #define _DDSkinStorageParserAssertType(name, type) NSAssert([name isKindOfClass:[type class]], @"%@<%@> is not " #type "!", @#name, [name class])
 #define DDSkinStorageParserAssertString(name) _DDSkinStorageParserAssertType(name, NSString)
 #define DDSkinStorageParserAssertDictionary(name) _DDSkinStorageParserAssertType(name, NSDictionary)
 
-
-/**
- #fff
- #ffffff
- rgb(255, 255, 255)
- rgba(255, 255, 255, 1)
-
- @param str css color string
- @return nil if invalidate css color
- */
-static inline UIColor *DDSkinDefaultStorageParseColorFromString(NSString *str) {
-    str = str.lowercaseString;
-    if ([str hasPrefix:@"#"] && (str.length == 4 || str.length == 7)) {
-        NSScanner *scanner = [[NSScanner alloc] initWithString:str];
-        unsigned long long i = 0;
-        scanner.scanLocation = 1;
-        if ([scanner scanHexLongLong:&i]) {
-            if (str.length == 4) {
-                return [UIColor colorWithRed:(i >> 16)/255.
-                                       green:(i&0xf0 >> 8)/255.
-                                        blue:i&0xf
-                                       alpha:1];
-            }
-            else {
-                return [UIColor colorWithRed:(i >> 32)/255.
-                                       green:(i&0xff00 >> 16)/255.
-                                        blue:i&0xff
-                                       alpha:1];
-            }
-        }
-    }
-    else if ([str hasPrefix:@"rgb"]) {
-        NSScanner *scanner = [[NSScanner alloc] initWithString:str];
-        scanner.charactersToBeSkipped = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-        if ([scanner scanString:@"rgba" intoString:nil]) {
-            float red = 0, green = 0, blue = 0, alpha = 0;
-            if ([scanner scanString:@"(" intoString:nil]
-                && [scanner scanFloat:&red]
-                && [scanner scanString:@"," intoString:nil]
-                && [scanner scanFloat:&green]
-                && [scanner scanString:@"," intoString:nil]
-                && [scanner scanFloat:&blue]
-                && [scanner scanString:@"," intoString:nil]
-                && [scanner scanFloat:&alpha]
-                && [scanner scanString:@")" intoString:nil]) {
-                return [UIColor colorWithRed:red/255 green:green/255 blue:blue/255 alpha:alpha];
-            }
-        }
-        else if ([scanner scanString:@"rgb" intoString:nil]) {
-            float red = 0, green = 0, blue = 0;
-            if ([scanner scanString:@"(" intoString:nil]
-                && [scanner scanFloat:&red]
-                && [scanner scanString:@"," intoString:nil]
-                && [scanner scanFloat:&green]
-                && [scanner scanString:@"," intoString:nil]
-                && [scanner scanFloat:&blue]
-                && [scanner scanString:@")" intoString:nil]) {
-                return [UIColor colorWithRed:red/255 green:green/255 blue:blue/255 alpha:1];
-            }
-        }
-    }
-    return nil;
-}
-
-static NSDictionary<NSString *, UIColor *> *DDSkinDefaultStorageParseColors(NSDictionary *dict) {
-    NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithCapacity:dict.count];
-    [dict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[NSString class]]) {
-            result[key] = DDSkinDefaultStorageParseColorFromString(obj);
-        }
-    }];
-    return result;
-}
 
 @implementation DDSkinDefaultStorageParser {
     NSDictionary *_dict;
@@ -112,26 +51,52 @@ static NSDictionary<NSString *, UIColor *> *DDSkinDefaultStorageParseColors(NSDi
                                                                   value:superName];
     }
     
+    
+    // colors
     NSDictionary *colors = _dict[DDSkinDefaultStorageColorsKey];
     if (colors) {
         if ([colors isKindOfClass:[NSDictionary class]]) {
-            [_storage setColorsDictionary:DDSkinDefaultStorageParseColors(colors)];
+            NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithCapacity:colors.count];
+            if ([self.delegate respondsToSelector:@selector(skinDefaultStorageParser:colorWithKey:value:)]) {
+                [colors enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = [self.delegate skinDefaultStorageParser:self colorWithKey:key value:obj];
+                    }
+                }];
+            }
+            else {
+                [colors enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = DDSkinStorageParseColorFromString(obj);
+                    }
+                }];
+            }
+            [_storage setColorsDictionary:result];
         }
         else {
             DDSkinStorageParserAssertDictionary(colors);
         }
     }
     
+    // strings
     NSDictionary *strings = _dict[DDSkinDefaultStorageStringsKey];
     if (strings) {
         if ([strings isKindOfClass:[NSDictionary class]]) {
-            [_storage setStringsDictionary:strings];
+            NSMutableDictionary<NSString *, NSString *> *result = [NSMutableDictionary new];
+            [strings enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                NSParameterAssert([obj isKindOfClass:[NSString class]]);
+                if ([obj isKindOfClass:[NSString class]]) {
+                    result[key] = obj;
+                }
+            }];
+            [_storage setStringsDictionary:result];
         }
         else {
             DDSkinStorageParserAssertDictionary(strings);
         }
     }
     
+    // urls
     NSDictionary *urls = _dict[DDSkinDefaultStorageUrlsKey];
     if (urls) {
         if ([urls isKindOfClass:[NSDictionary class]]) {
@@ -145,7 +110,9 @@ static NSDictionary<NSString *, UIColor *> *DDSkinDefaultStorageParseColors(NSDi
             else {
                 [urls enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
                     NSParameterAssert([obj isKindOfClass:[NSString class]]);
-                    result[key] = [NSURL URLWithString:obj];
+                    if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = [NSURL URLWithString:obj];
+                    }
                 }];
             }
             [_storage setUrlsDictionary:result];
@@ -153,6 +120,121 @@ static NSDictionary<NSString *, UIColor *> *DDSkinDefaultStorageParseColors(NSDi
         else {
             DDSkinStorageParserAssertDictionary(urls);
         }
+    }
+    
+    // numbers
+    NSDictionary *numbers = _dict[DDSkinDefaultStorageNumbersKey];
+    if (numbers) {
+        if ([numbers isKindOfClass:[NSDictionary class]]) {
+            NSMutableDictionary<NSString *, NSNumber *> *result = [[NSMutableDictionary alloc] initWithCapacity:numbers.count];
+            if ([self.delegate respondsToSelector:@selector(skinDefaultStorageParser:numberWithKey:value:)]) {
+                [numbers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    result[key] = [self.delegate skinDefaultStorageParser:self numberWithKey:key value:obj];
+                }];
+            }
+            else {
+                [numbers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSNumber class]]) {
+                        result[key] = (NSNumber *)obj;
+                    }
+                    else if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = @(((NSString *)obj).doubleValue);
+                    }
+                }];
+            }
+            [_storage setNumbersDictionary:result];
+        }
+        else {
+            DDSkinStorageParserAssertDictionary(numbers);
+        }
+    }
+    
+    // images
+    NSDictionary *images = _dict[DDSkinDefaultStorageImagesKey];
+    if (images) {
+        if ([images isKindOfClass:[NSDictionary class]]) {
+            NSMutableDictionary<NSString *, DDSkinStorageImageItem *> *result = [[NSMutableDictionary alloc] initWithCapacity:images.count];
+            if ([self.delegate respondsToSelector:@selector(skinDefaultStorageParser:imageWithKey:value:)]) {
+                [images enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = [self.delegate skinDefaultStorageParser:self imageWithKey:key value:obj];
+                    }
+                }];
+            }
+            else {
+                [images enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = [DDSkinStorageImageItem bundleImageWithName:obj bundle:nil];
+                    }
+                }];
+            }
+            [_storage setImagesDictionary:result];
+        }
+        else {
+            DDSkinStorageParserAssertDictionary(images);
+        }
+    }
+    
+    // bool
+    NSDictionary *bools = _dict[DDSkinDefaultStorageBooleansKey];
+    if (bools) {
+        if ([bools isKindOfClass:[NSDictionary class]]) {
+            NSMutableDictionary<NSString *, NSNumber *> *result = [[NSMutableDictionary alloc] initWithCapacity:bools.count];
+            if ([self.delegate respondsToSelector:@selector(skinDefaultStorageParser:booleanWithKey:value:)]) {
+                [bools enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = @([self.delegate skinDefaultStorageParser:self booleanWithKey:key value:obj]);
+                    }
+                }];
+            }
+            else {
+                [bools enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSNumber class]]) {
+                        result[key] = obj;
+                    }
+                    else if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = @([(NSString *)obj boolValue]);
+                    }
+                }];
+            }
+            [_storage setBooleanDictionary:result];
+        }
+        else {
+            DDSkinStorageParserAssertDictionary(bools);
+        }
+    }
+    
+    // font
+    NSDictionary *fonts = _dict[DDSkinDefaultStorageFontsKey];
+    if (fonts) {
+        if ([fonts isKindOfClass:[NSDictionary class]]) {
+            NSMutableDictionary<NSString *, UIFont *> *result = [[NSMutableDictionary alloc] initWithCapacity:fonts.count];
+            if ([self.delegate respondsToSelector:@selector(skinDefaultStorageParser:fontWithKey:value:)]) {
+                [fonts enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    result[key] = [self.delegate skinDefaultStorageParser:self fontWithKey:key value:obj];
+                }];
+            }
+            else {
+                [fonts enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+                    if ([obj isKindOfClass:[NSString class]]) {
+                        result[key] = DDSkinStorageParseFontFromString(obj);
+                    }
+                    else if ([obj isKindOfClass:[NSDictionary class]]) {
+                        result[key] = DDSkinStorageParseFontFromDictionary(obj);
+                    }
+                }];
+            }
+            [_storage setFontDictionary:result];
+        }
+        else {
+            DDSkinStorageParserAssertDictionary(fonts);
+        }
+    }
+    
+    // object
+    NSDictionary *objects = _dict[DDSkinDefaultStorageObjectsKey];
+    if (objects) {
+        [_storage setObjectsDictionary:objects];
     }
 }
 

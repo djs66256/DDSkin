@@ -10,13 +10,6 @@
 #import "DDSkinDefaultStorage.h"
 #import "DDSkinCore.h"
 
-NSString * const DDSkinDefaultStorageSuperKey   = @"super";     // super
-NSString * const DDSkinDefaultStorageColorsKey  = @"colors";     // color
-NSString * const DDSkinDefaultStorageStringsKey = @"strings";    // string
-NSString * const DDSkinDefaultStorageUrlsKey    = @"urls";       // url
-NSString * const DDSkinDefaultStorageObjectsKey = @"objects";    // object
-NSString * const DDSkinDefaultStorageImagesKey  = @"images";     // image
-
 @implementation DDSkinDefaultStorage {
     NSDictionary<NSString *, UIColor *>     *_colors;
     NSDictionary<NSString *, NSString *>    *_strings;

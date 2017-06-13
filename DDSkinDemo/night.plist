@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   night.plist
-   DDSkinDemo
-
-   Created by daniel on 2017/6/11.
-   Copyright (c) 2017年 Daniel. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>super</key>
+	<string>base</string>
+	<key>colors</key>
+	<dict>
+		<key>red</key>
+		<string>rgb(0, 128, 128)</string>
+		<key>yellow</key>
+		<string>rgba(0,  0,  128, 0.8)</string>
+		<key>green</key>
+		<string>#808</string>
+		<key>blue</key>
+		<string>#888800</string>
+	</dict>
+</dict>
 </plist>

@@ -38,6 +38,8 @@
 		652108221EEDD9D0004F06FF /* DDSkinStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521081C1EEDD9D0004F06FF /* DDSkinStorage.m */; };
 		652108251EEDDA19004F06FF /* DDSkinStorageImageItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108231EEDDA19004F06FF /* DDSkinStorageImageItem.h */; };
 		652108261EEDDA19004F06FF /* DDSkinStorageImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108241EEDDA19004F06FF /* DDSkinStorageImageItem.m */; };
+		652108291EF043B2004F06FF /* DDSkinStorageParserHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108271EF043B2004F06FF /* DDSkinStorageParserHelper.h */; };
+		6521082A1EF043B2004F06FF /* DDSkinStorageParserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108281EF043B2004F06FF /* DDSkinStorageParserHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		6521081C1EEDD9D0004F06FF /* DDSkinStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinStorage.m; sourceTree = "<group>"; };
 		652108231EEDDA19004F06FF /* DDSkinStorageImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinStorageImageItem.h; sourceTree = "<group>"; };
 		652108241EEDDA19004F06FF /* DDSkinStorageImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinStorageImageItem.m; sourceTree = "<group>"; };
+		652108271EF043B2004F06FF /* DDSkinStorageParserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSkinStorageParserHelper.h; sourceTree = "<group>"; };
+		652108281EF043B2004F06FF /* DDSkinStorageParserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSkinStorageParserHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,8 @@
 				652108181EEDD9D0004F06FF /* DDSkinDefaultStorage.m */,
 				652108191EEDD9D0004F06FF /* DDSkinDefaultStorageParser.h */,
 				6521081A1EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m */,
+				652108271EF043B2004F06FF /* DDSkinStorageParserHelper.h */,
+				652108281EF043B2004F06FF /* DDSkinStorageParserHelper.m */,
 				6521081B1EEDD9D0004F06FF /* DDSkinStorage.h */,
 				6521081C1EEDD9D0004F06FF /* DDSkinStorage.m */,
 				652108231EEDDA19004F06FF /* DDSkinStorageImageItem.h */,
@@ -244,6 +250,7 @@
 				6521080B1EED3B05004F06FF /* UIView+DDSkin.h in Headers */,
 				652108211EEDD9D0004F06FF /* DDSkinStorage.h in Headers */,
 				652108071EED3B05004F06FF /* DDSkinManager.h in Headers */,
+				652108291EF043B2004F06FF /* DDSkinStorageParserHelper.h in Headers */,
 				6521081D1EEDD9D0004F06FF /* DDSkinDefaultStorage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +374,7 @@
 				652108031EED3B05004F06FF /* DDSkinCore.m in Sources */,
 				652108051EED3B05004F06FF /* DDSkinHandler.m in Sources */,
 				6521081E1EEDD9D0004F06FF /* DDSkinDefaultStorage.m in Sources */,
+				6521082A1EF043B2004F06FF /* DDSkinStorageParserHelper.m in Sources */,
 				652108201EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m in Sources */,
 				6521080C1EED3B05004F06FF /* UIView+DDSkin.m in Sources */,
 				652108081EED3B05004F06FF /* DDSkinManager.m in Sources */,
