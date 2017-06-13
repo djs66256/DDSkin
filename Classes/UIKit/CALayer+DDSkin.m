@@ -12,20 +12,20 @@
 
 @implementation CALayer (DDSkin)
 
-DDSkinNumberPropertyDefine(cornerRadiusSkinKey, CornerRadiusSkinKey, cornerRadius, double)
+DDSkinNumberPropertyDefine(cornerRadius, CornerRadius, double)
 
-DDSkinNumberPropertyDefine(borderWidthSkinKey, BorderWidthSkinKey, borderWidth, double)
+DDSkinNumberPropertyDefine(borderWidth, BorderWidth, double)
 
-DDSkinPropertyDefineTransform(borderColorSkinKey, BorderColorSkinKey, color, Color, borderColor, CGColor)
+DDSkinPropertyDefineTransform(borderColor, BorderColor, color, Color, CGColor)
 
-DDSkinNumberPropertyDefine(opacitySkinKey, OpacitySkinKey, opacity, double)
+DDSkinNumberPropertyDefine(opacity, Opacity, double)
 
-DDSkinPropertyDefineTransform(shadowColorSkinKey, ShadowColorSkinKey, color, Color, shadowColor, CGColor)
+DDSkinPropertyDefineTransform(shadowColor, ShadowColor, color, Color, CGColor)
 
-DDSkinNumberPropertyDefine(shadowOpacitySkinKey, ShadowOpacitySkinKey, shadowOpacity, float)
+DDSkinNumberPropertyDefine(shadowOpacity, ShadowOpacity, float)
 
-DDSkinPropertyDefineDefaultValue(shadowOffsetSkinKey, ShadowOffsetSkinKey, size, Size, shadowOffset, CGSizeZero)
+DDSkinPropertyDefineDefaultValue(shadowOffset, ShadowOffset, size, Size, CGSizeZero)
 
-DDSkinNumberPropertyDefine(shadowRadiusSkinKey, ShadowRadiusSkinKey, shadowRadius, double)
+DDSkinNumberPropertyDefine(shadowRadius, ShadowRadius, double)
 
 @end

@@ -8,9 +8,10 @@
 
 #import "UIView+DDSkin.h"
 #import "DDSkinUIMacros.h"
-#import "DDSkinCore.h"
 
 @implementation UIView (DDSkin)
+
+//@dynamic backgroundColorSkinKey;
 
 //- (NSString *)backgroundColorSkinKey {
 //    DDSkinHandler *handler = DDSkinGetTargetHandlerByKey(self, DDSelStr(backgroundColor));
@@ -30,8 +31,8 @@
 //    }
 //}
 
-DDSkinPropertyDefine(backgroundColorSkinKey, BackgroundColorSkinKey, color, Color, backgroundColor);
+DDSkinPropertyDefine(backgroundColor, BackgroundColor, color, Color);
 
-DDSkinPropertyDefine(tintColorSkinKey, TintColorSkinKey, color, Color, tintColor);
+DDSkinPropertyDefine(tintColor, TintColor, color, Color);
 
 @end

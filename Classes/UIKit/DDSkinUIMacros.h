@@ -10,6 +10,7 @@
 #define DDSkinUIMacros_h
 
 #import "DDSkinMacros.h"
+#import "DDSkinCore.h"
 
 #define _DDSkinPropertyGetterDefine(name, sel) \
 - (NSString *)name {\
@@ -61,20 +62,20 @@ _DDSkinPropertyGetterDefine(name, sel) \
 _DDSkinBasicTypePropertySetterDefine(upperName, type, upperType, sel, transform)
 
 
-#define DDSkinPropertyDefine(name, upperName, type, upperType, sel) \
-_DDSkinPropertyDefine(name, upperName, type, upperType, sel)
+#define DDSkinPropertyDefine(sel, upperSel, type, upperType) \
+_DDSkinPropertyDefine(sel ## SkinKey, upperSel ## SkinKey, type, upperType, sel)
 
-#define DDSkinPropertyDefineDefaultValue(name, upperName, type, upperType, sel, defaultValue) \
-_DDSkinPropertyDefineDefaultValue(name, upperName, type, upperType, sel, defaultValue)
+#define DDSkinPropertyDefineDefaultValue(sel, upperSel, type, upperType, defaultValue) \
+_DDSkinPropertyDefineDefaultValue(sel ## SkinKey, upperSel ## SkinKey, type, upperType, sel, defaultValue)
 
-#define DDSkinPropertyDefineTransform(name, upperName, type, upperType, sel, transform) \
-_DDSkinBasicTypePropertyDefine(name, upperName, type, upperType, sel, transform)
+#define DDSkinPropertyDefineTransform(sel, upperSel, type, upperType, transform) \
+_DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, type, upperType, sel, transform)
 
-#define DDSkinBooleanPropertyDefine(name, upperName, sel) \
-_DDSkinBasicTypePropertyDefine(name, upperName, number, Number, sel, bool)
+#define DDSkinBooleanPropertyDefine(sel, upperSel) \
+_DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, number, Number, sel, bool)
 
-#define DDSkinNumberPropertyDefine(name, upperName, sel, numberType) \
-_DDSkinBasicTypePropertyDefine(name, upperName, number, Number, sel, numberType ## Value)
+#define DDSkinNumberPropertyDefine(sel, upperSel, numberType) \
+_DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, number, Number, sel, numberType ## Value)
 
 
 #endif /* DDSkinUIMacros_h */
