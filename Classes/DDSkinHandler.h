@@ -18,6 +18,7 @@ typedef NS_ENUM(NSInteger, DDSkinHandlerKeyPathValueType) {
     DDSkinHandlerKeyPathValueTypeImage,
     DDSkinHandlerKeyPathValueTypeSize,
     DDSkinHandlerKeyPathValueTypeObject,
+    DDSkinHandlerKeyPathValueTypeFont
 };
 
 NS_ASSUME_NONNULL_BEGIN

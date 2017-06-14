@@ -44,6 +44,8 @@
 		6521082E1EF04B05004F06FF /* CALayer+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521082C1EF04B05004F06FF /* CALayer+DDSkin.m */; };
 		652108321EF054E9004F06FF /* UIImageView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108301EF054E9004F06FF /* UIImageView+DDSkin.h */; };
 		652108331EF054E9004F06FF /* UIImageView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108311EF054E9004F06FF /* UIImageView+DDSkin.m */; };
+		652108361EF17EEF004F06FF /* UILabel+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108341EF17EEF004F06FF /* UILabel+DDSkin.h */; };
+		652108371EF17EEF004F06FF /* UILabel+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108351EF17EEF004F06FF /* UILabel+DDSkin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		6521082F1EF0519F004F06FF /* DDSkinUIMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDSkinUIMacros.h; sourceTree = "<group>"; };
 		652108301EF054E9004F06FF /* UIImageView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DDSkin.h"; sourceTree = "<group>"; };
 		652108311EF054E9004F06FF /* UIImageView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DDSkin.m"; sourceTree = "<group>"; };
+		652108341EF17EEF004F06FF /* UILabel+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DDSkin.h"; sourceTree = "<group>"; };
+		652108351EF17EEF004F06FF /* UILabel+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DDSkin.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,8 @@
 				652107FF1EED3B05004F06FF /* UIView+DDSkin.m */,
 				652108301EF054E9004F06FF /* UIImageView+DDSkin.h */,
 				652108311EF054E9004F06FF /* UIImageView+DDSkin.m */,
+				652108341EF17EEF004F06FF /* UILabel+DDSkin.h */,
+				652108351EF17EEF004F06FF /* UILabel+DDSkin.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				652108041EED3B05004F06FF /* DDSkinHandler.h in Headers */,
 				652107B51EEC59E0004F06FF /* DDSkin.h in Headers */,
 				6521082D1EF04B05004F06FF /* CALayer+DDSkin.h in Headers */,
+				652108361EF17EEF004F06FF /* UILabel+DDSkin.h in Headers */,
 				652108061EED3B05004F06FF /* DDSkinMacros.h in Headers */,
 				652108251EEDDA19004F06FF /* DDSkinStorageImageItem.h in Headers */,
 				652108321EF054E9004F06FF /* UIImageView+DDSkin.h in Headers */,
@@ -392,6 +399,7 @@
 				6521081E1EEDD9D0004F06FF /* DDSkinDefaultStorage.m in Sources */,
 				6521082A1EF043B2004F06FF /* DDSkinStorageParserHelper.m in Sources */,
 				652108201EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m in Sources */,
+				652108371EF17EEF004F06FF /* UILabel+DDSkin.m in Sources */,
 				6521080C1EED3B05004F06FF /* UIView+DDSkin.m in Sources */,
 				652108081EED3B05004F06FF /* DDSkinManager.m in Sources */,
 				652108221EEDD9D0004F06FF /* DDSkinStorage.m in Sources */,

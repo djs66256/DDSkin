@@ -16,11 +16,11 @@ DDSkinNumberPropertyDefine(cornerRadius, CornerRadius, double)
 
 DDSkinNumberPropertyDefine(borderWidth, BorderWidth, double)
 
-DDSkinPropertyDefineTransform(borderColor, BorderColor, color, Color, CGColor)
+DDSkinPropertyDefineTransform(borderColor, BorderColor, color, Color, CGColor, nil)
 
 DDSkinNumberPropertyDefine(opacity, Opacity, double)
 
-DDSkinPropertyDefineTransform(shadowColor, ShadowColor, color, Color, CGColor)
+DDSkinPropertyDefineTransform(shadowColor, ShadowColor, color, Color, CGColor, nil)
 
 DDSkinNumberPropertyDefine(shadowOpacity, ShadowOpacity, float)
 
