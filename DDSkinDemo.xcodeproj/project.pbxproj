@@ -74,6 +74,7 @@
 		6521086B1EF18955004F06FF /* UIToolbar+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108691EF18955004F06FF /* UIToolbar+DDSkin.m */; };
 		6521086E1EF18981004F06FF /* UITabBar+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 6521086C1EF18981004F06FF /* UITabBar+DDSkin.h */; };
 		6521086F1EF18981004F06FF /* UITabBar+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521086D1EF18981004F06FF /* UITabBar+DDSkin.m */; };
+		65A28CBD1EF6A18700E67F25 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A28CBC1EF6A18700E67F25 /* CustomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,8 @@
 		652108691EF18955004F06FF /* UIToolbar+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+DDSkin.m"; sourceTree = "<group>"; };
 		6521086C1EF18981004F06FF /* UITabBar+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+DDSkin.h"; sourceTree = "<group>"; };
 		6521086D1EF18981004F06FF /* UITabBar+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+DDSkin.m"; sourceTree = "<group>"; };
+		65A28CBB1EF6A18700E67F25 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		65A28CBC1EF6A18700E67F25 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,8 @@
 				652107991EEC59C9004F06FF /* AppDelegate.m */,
 				6521079B1EEC59C9004F06FF /* ViewController.h */,
 				6521079C1EEC59C9004F06FF /* ViewController.m */,
+				65A28CBB1EF6A18700E67F25 /* CustomViewController.h */,
+				65A28CBC1EF6A18700E67F25 /* CustomViewController.m */,
 				6521079E1EEC59C9004F06FF /* Main.storyboard */,
 				652107A11EEC59C9004F06FF /* Assets.xcassets */,
 				652107A31EEC59C9004F06FF /* LaunchScreen.storyboard */,
@@ -485,6 +490,7 @@
 				6521079D1EEC59C9004F06FF /* ViewController.m in Sources */,
 				6521079A1EEC59C9004F06FF /* AppDelegate.m in Sources */,
 				652107971EEC59C9004F06FF /* main.m in Sources */,
+				65A28CBD1EF6A18700E67F25 /* CustomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
