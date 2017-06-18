@@ -40,6 +40,14 @@
     return [[DDSkinBlockHandler alloc] initWithTargetKey:targetKey storageKey:storageKey block:handler];
 }
 
+- (NSString *)description {
+    return self.debugDescription;
+}
+
+- (NSString *)debugDescription {
+    return [NSString stringWithFormat:@"<%@: %p> (targetKey: %@, storageKey: %@)", NSStringFromClass(self.class), self, self.targetKey, self.storageKey];
+}
+
 @end
 
 
