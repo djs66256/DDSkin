@@ -102,4 +102,20 @@
     }
 }
 
+- (UIFont *)fontForKey:(NSString *)key {
+    return _fonts[key] ?: [self.superStorage fontForKey:key];
+}
+
+- (NSNumber *)numberForKey:(NSString *)key {
+    return _numbers[key] ?: [self.superStorage numberForKey:key];
+}
+
+- (NSNumber *)booleanForKey:(NSString *)key {
+    return _booleans[key] ?: [self.superStorage booleanForKey:key];
+}
+
+- (NSValue *)sizeForKey:(NSString *)key {
+    return _sizes[key] ?: [self.superStorage sizeForKey:key];
+}
+
 @end

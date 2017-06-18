@@ -24,7 +24,7 @@ DDSkinPropertyDefineTransform(shadowColor, ShadowColor, color, Color, CGColor, n
 
 DDSkinNumberPropertyDefine(shadowOpacity, ShadowOpacity, float)
 
-DDSkinPropertyDefineDefaultValue(shadowOffset, ShadowOffset, size, Size, CGSizeZero)
+DDSkinPropertyDefineTransform(shadowOffset, ShadowOffset, size, Size, CGSizeValue, CGSizeZero)
 
 DDSkinNumberPropertyDefine(shadowRadius, ShadowRadius, double)
 

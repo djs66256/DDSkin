@@ -65,14 +65,11 @@ _DDSkinBasicTypePropertySetterDefine(upperName, type, upperType, sel, transform,
 #define DDSkinPropertyDefine(sel, upperSel, type, upperType) \
 _DDSkinPropertyDefine(sel ## SkinKey, upperSel ## SkinKey, type, upperType, sel)
 
-#define DDSkinPropertyDefineDefaultValue(sel, upperSel, type, upperType, defaultValue) \
-_DDSkinPropertyDefineDefaultValue(sel ## SkinKey, upperSel ## SkinKey, type, upperType, sel, defaultValue)
-
 #define DDSkinPropertyDefineTransform(sel, upperSel, type, upperType, transform, defaultValue) \
 _DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, type, upperType, sel, transform, defaultValue)
 
 #define DDSkinBooleanPropertyDefine(sel, upperSel, defaultValue) \
-DDSkinPropertyDefineDefaultValue(sel, upperSel, boolean, Boolean, defaultValue)
+_DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, boolean, Boolean, sel, boolValue, defaultValue)
 
 #define DDSkinNumberPropertyDefine(sel, upperSel, numberType) \
 _DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, number, Number, sel, numberType ## Value, 0)

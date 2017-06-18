@@ -73,6 +73,21 @@
         case DDSkinHandlerKeyPathValueTypeObject:
             value = [skinStorage objectForKey:self.storageKey];
             break;
+        case DDSkinHandlerKeyPathValueTypeFont:
+            value = [skinStorage fontForKey:self.storageKey];
+            break;
+        case DDSkinHandlerKeyPathValueTypeImage:
+            value = [skinStorage imageForKey:self.storageKey];
+            break;
+        case DDSkinHandlerKeyPathValueTypeNumber:
+            value = [skinStorage numberForKey:self.storageKey];
+            break;
+        case DDSkinHandlerKeyPathValueTypeBoolean:
+            value = [skinStorage booleanForKey:self.storageKey];
+            break;
+        case DDSkinHandlerKeyPathValueTypeSize:
+            value = [skinStorage sizeForKey:self.storageKey];
+            break;
         default:
             break;
     }

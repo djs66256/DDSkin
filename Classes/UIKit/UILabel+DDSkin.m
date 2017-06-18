@@ -19,7 +19,7 @@ DDSkinPropertyDefine(textColor, TextColor, color, Color)
 
 DDSkinPropertyDefine(shadowColor, ShadowColor, color, Color)
 
-DDSkinPropertyDefineDefaultValue(shadowOffset, ShadowOffset, size, Size, CGSizeZero)
+DDSkinPropertyDefineTransform(shadowOffset, ShadowOffset, size, Size, CGSizeValue, CGSizeZero)
 
 DDSkinNumberPropertyDefine(textAlignment, TextAlignment, integer)
 
@@ -29,7 +29,7 @@ DDSkinPropertyDefine(highlightedTextColor, HighlightedTextColor, color, Color)
 
 DDSkinNumberPropertyDefine(numberOfLines, NumberOfLines, integer)
 
-DDSkinPropertyDefineDefaultValue(adjustsFontSizeToFitWidth, AdjustsFontSizeToFitWidth, boolean, Boolean, NO)
+DDSkinBooleanPropertyDefine(adjustsFontSizeToFitWidth, AdjustsFontSizeToFitWidth, NO)
 
 DDSkinNumberPropertyDefineDefaultValue(minimumScaleFactor, MinimumScaleFactor, double, 1.0)
 

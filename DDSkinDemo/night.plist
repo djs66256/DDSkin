@@ -4,6 +4,13 @@
 <dict>
 	<key>super</key>
 	<string>base</string>
+	<key>fonts</key>
+	<dict>
+		<key>content</key>
+		<string>22</string>
+		<key>title</key>
+		<string>25</string>
+	</dict>
 	<key>colors</key>
 	<dict>
 		<key>red</key>

@@ -18,8 +18,8 @@
 - (UIImage *)imageForKey:(NSString *)key;
 - (NSNumber *)numberForKey:(NSString *)key;
 - (UIFont *)fontForKey:(NSString *)key;
-- (BOOL)booleanForKey:(NSString *)key;
-- (CGSize)sizeForKey:(NSString *)size;
+- (NSNumber *)booleanForKey:(NSString *)key;
+- (NSValue *)sizeForKey:(NSString *)key;
 
 @end
 

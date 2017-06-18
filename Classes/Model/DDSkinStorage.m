@@ -38,8 +38,12 @@
     return nil;
 }
 
-- (BOOL)booleanForKey:(NSString *)key {
-    return NO;
+- (NSNumber *)booleanForKey:(NSString *)key {
+    return nil;
+}
+
+- (NSValue *)sizeForKey:(NSString *)key {
+    return nil;
 }
 
 @end
