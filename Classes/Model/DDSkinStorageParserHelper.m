@@ -76,7 +76,7 @@ UIFont *DDSkinStorageParseFontFromString(NSString *str) {
     if (str.length == 0) return nil;
     
     NSScanner *scanner = [[NSScanner alloc] initWithString:str];
-    CGFloat size;
+    double size;
     if ([scanner scanDouble:&size]) {
         NSString *name = nil;
         if ([scanner scanCharactersFromSet:[NSCharacterSet whitespaceCharacterSet] intoString:nil]
