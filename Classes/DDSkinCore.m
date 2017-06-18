@@ -19,25 +19,30 @@ static inline NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *DDSkinGet
     return g_mapTable;
 }
 
-static inline pthread_mutex_t *DDSkinGetTargetHandlerTableLock() {
-    static pthread_mutex_t g_lock;
+static inline pthread_rwlock_t *DDSkinGetTargetHandlerTableLock() {
+    static pthread_rwlock_t g_lock;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        pthread_mutex_init(&g_lock, NULL);
+        pthread_rwlock_init(&g_lock, NULL);
     });
     return &g_lock;
 }
 
-#define DDSkinTargetHandlerTableLock(x) \
-    pthread_mutex_lock(DDSkinGetTargetHandlerTableLock());\
-    (x); \
-    pthread_mutex_unlock(DDSkinGetTargetHandlerTableLock())
+#define DDSkinTargetHandlerTableReadLock(x) \
+pthread_rwlock_rdlock(DDSkinGetTargetHandlerTableLock());\
+(x); \
+pthread_rwlock_unlock(DDSkinGetTargetHandlerTableLock())
+
+#define DDSkinTargetHandlerTableWriteLock(x) \
+pthread_rwlock_wrlock(DDSkinGetTargetHandlerTableLock());\
+(x); \
+pthread_rwlock_unlock(DDSkinGetTargetHandlerTableLock())
 
 
 static id<DDSkinStorageProtocol> g_skinStorage = nil;
 inline void DDSkinSetCurrentStorage(id<DDSkinStorageProtocol> storage) {
     BOOL refresh = false;
-    DDSkinTargetHandlerTableLock({
+    DDSkinTargetHandlerTableWriteLock({
         if (g_skinStorage != storage) {
             g_skinStorage = storage;
             
@@ -50,13 +55,17 @@ inline void DDSkinSetCurrentStorage(id<DDSkinStorageProtocol> storage) {
 }
 
 inline id<DDSkinStorageProtocol> DDSkinGetCurrentStorage() {
-    return g_skinStorage;
+    id<DDSkinStorageProtocol> storage;
+    DDSkinTargetHandlerTableReadLock({
+        storage = g_skinStorage;
+    });
+    return storage;
 }
 
 void DDSkinRegisterTargetHandler(NSObject *target, DDSkinHandler *handler, BOOL apply) {
     NSCParameterAssert(target != nil);
     NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
-    DDSkinTargetHandlerTableLock({
+    DDSkinTargetHandlerTableWriteLock({
         NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
         if (handlerSet == nil) {
             handlerSet = [[NSMutableSet alloc] init];
@@ -79,7 +88,7 @@ void DDSkinUnregisterTargetHandler(NSObject *target, NSString *key) {
     NSCParameterAssert(target != nil);
     NSCParameterAssert(key != nil);
     NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
-    DDSkinTargetHandlerTableLock({
+    DDSkinTargetHandlerTableWriteLock({
         NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
         for (DDSkinHandler *handler in handlerSet) {
             if ([handler.targetKey isEqualToString:key]) {
@@ -96,7 +105,7 @@ DDSkinHandler *DDSkinGetTargetHandlerByKey(NSObject *target, NSString *key) {
     DDSkinHandler *result = nil;
     if (target && key) {
         NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
-        DDSkinTargetHandlerTableLock({
+        DDSkinTargetHandlerTableReadLock({
             NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
             for (DDSkinHandler *handler in handlerSet) {
                 if ([handler.targetKey isEqualToString:key]) {
@@ -112,15 +121,15 @@ DDSkinHandler *DDSkinGetTargetHandlerByKey(NSObject *target, NSString *key) {
 void DDSkinRefreshAllTarget() {
     NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
     DDMainThreadRun({
-        DDSkinTargetHandlerTableLock({
-            [[NSNotificationCenter defaultCenter] postNotificationName:DDSkinStorageWillChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DDSkinStorageWillChangeNotification object:nil];
+        DDSkinTargetHandlerTableReadLock({
             for (NSObject *target in mapTable.keyEnumerator) {
                 NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
                 for (DDSkinHandler *handler in handlerSet) {
                     [handler handleSkinChanged:DDSkinGetCurrentStorage() target:target];
                 }
             }
-            [[NSNotificationCenter defaultCenter] postNotificationName:NSCurrentLocaleDidChangeNotification object:nil];
         });
+        [[NSNotificationCenter defaultCenter] postNotificationName:NSCurrentLocaleDidChangeNotification object:nil];
     });
 }
