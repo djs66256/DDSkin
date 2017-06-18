@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.customFontSkinKey = @"title";
+    self.customColorSkinKey = @"red";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +48,7 @@
     if (_customColorSkinKey != key) {
         _customColorSkinKey = key;
         DDSkinHandler *handler = [DDSkinHandler<typeof(self)> handlerWithTargetKey:DDSelStr(customColorSkinKey) storageKey:key block:^(DDSkinHandler * _Nonnull handler, id<DDSkinStorageProtocol>  _Nonnull skinStorage, NSObject * _Nonnull target) {
-            [(typeof(self))target updateTitleWithFont:[skinStorage fontForKey:[(typeof(self))target customColorSkinKey]]
+            [(typeof(self))target updateTitleWithFont:[skinStorage fontForKey:[(typeof(self))target customFontSkinKey]]
                                                 color:[skinStorage colorForKey:handler.storageKey]];
         }];
         DDSkinRegisterTargetHandler(self, handler, YES);

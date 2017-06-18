@@ -22,6 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.storages = @[[self storageWithName:@"day"], [self storageWithName:@"night"]];
+    self.index = 1;
+    [DDSkinManager setCurrentStorage:self.storages.firstObject];
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
     

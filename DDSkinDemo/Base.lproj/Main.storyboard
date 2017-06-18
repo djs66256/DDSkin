@@ -274,17 +274,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="customColorSkinKey" value="red"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="customFontSkinKey" value="title"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="label" destination="FvW-wE-YVv" id="wpp-B2-rTE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GM-x4-2Sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-991.20000000000005" y="315.29235382308849"/>
+            <point key="canvasLocation" x="-1122" y="692"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oVo-QZ-Adx">
