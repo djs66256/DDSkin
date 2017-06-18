@@ -4,6 +4,18 @@
 <dict>
 	<key>super</key>
 	<string>base</string>
+	<key>strings</key>
+	<dict>
+		<key>buttonTitle</key>
+		<string>night button</string>
+	</dict>
+	<key>images</key>
+	<dict>
+		<key>icon</key>
+		<string>icon2</string>
+		<key>bg</key>
+		<string>bg2</string>
+	</dict>
 	<key>fonts</key>
 	<dict>
 		<key>content</key>
@@ -14,13 +26,13 @@
 	<key>colors</key>
 	<dict>
 		<key>red</key>
-		<string>rgb(0, 128, 128)</string>
+		<string>rgb(128, 0, 0)</string>
 		<key>yellow</key>
-		<string>rgba(0,  0,  128, 0.8)</string>
+		<string>rgba(128,  128,  0, 0.8)</string>
 		<key>green</key>
-		<string>#808</string>
+		<string>#080</string>
 		<key>blue</key>
-		<string>#888800</string>
+		<string>#000088</string>
 	</dict>
 </dict>
 </plist>

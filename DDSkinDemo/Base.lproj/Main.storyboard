@@ -60,13 +60,45 @@
                                             <segue destination="dDE-Y9-aI4" kind="show" id="RrM-e5-5jC"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fjb-id-xZd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="1Ub-s0-74W" style="IBUITableViewCellStyleDefault" id="fjb-id-xZd">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fjb-id-xZd" id="J8r-FT-frZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="UIButton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Ub-s0-74W">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tya-ft-5M0" kind="show" id="MWY-hA-Iw0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="M7u-i6-jfA" style="IBUITableViewCellStyleDefault" id="Zkf-UU-up3">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zkf-UU-up3" id="jbQ-Dp-SEM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="UIKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M7u-i6-jfA">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="199-pF-Gow" kind="show" id="bIG-bn-uE7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -81,6 +113,108 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onP-cM-gYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1090" y="-49"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="alA-F3-Ppi">
+            <objects>
+                <viewController id="199-pF-Gow" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wVc-Eq-1Ss"/>
+                        <viewControllerLayoutGuide type="bottom" id="iBc-Vp-rzQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4R0-IY-CkK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="imG-O1-A0J">
+                                <rect key="frame" x="43" y="96" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorSkinKey" value="green"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="tintColorSkinKey" value="red"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZSE-4c-Q8G">
+                                <rect key="frame" x="43" y="163" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="progressTintColorSkinKey" value="blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="trackTintColorSkinKey" value="red"/>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGT-W0-tmh">
+                                <rect key="frame" x="43" y="196" width="82" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WvP-xJ-KJr">
+                                        <rect key="frame" x="23" y="19" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorSkinKey" value="red"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsH-bu-2qj">
+                                <rect key="frame" x="258" y="96" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="onTintColorSkinKey" value="blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="thumbTintColorSkinKey" value="green"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="tintColorSkinKey" value="red"/>
+                                </userDefinedRuntimeAttributes>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ab0-bs-ec4">
+                                <rect key="frame" x="215" y="149" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="minimumTrackTintColorSkinKey" value="blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="maximumTrackTintColorSkinKey" value="red"/>
+                                </userDefinedRuntimeAttributes>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIH-cn-2Po">
+                                <rect key="frame" x="43" y="278" width="194" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontSkinKey" value="content"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textColorSkinKey" value="blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shadowColorSkinKey" value="red"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textSkinKey" value="buttonTitle"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorSkinKey" value="yellow"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0i-kM-KII">
+                                <rect key="frame" x="0.0" y="349" width="375" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalTitleColorSkinKey" value="red"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="highlightedTitleColorSkinKey" value="green"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalImageSkinKey" value="icon"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalTitleSkinKey" value="buttonTitle"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalBackgroundImageSkinKey" value="bg"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LcW-lJ-VYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551.20000000000005" y="-18.440779610194905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Prt-73-rua">
@@ -129,6 +263,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbS-Zh-MZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-330.39999999999998" y="240.62968515742131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uW9-3c-oup">
+            <objects>
+                <viewController id="tya-ft-5M0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oEJ-c7-eOS"/>
+                        <viewControllerLayoutGuide type="bottom" id="KUf-TK-Uss"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bsR-vp-LJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-e9-Ce3">
+                                <rect key="frame" x="0.0" y="140" width="375" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalTitleColorSkinKey" value="red"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="highlightedTitleColorSkinKey" value="green"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalImageSkinKey" value="icon"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalTitleSkinKey" value="buttonTitle"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="normalBackgroundImageSkinKey" value="bg"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVg-xu-pxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-358" y="-134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

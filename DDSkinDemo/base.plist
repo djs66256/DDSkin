@@ -7,7 +7,10 @@
 	<key>booleans</key>
 	<dict/>
 	<key>strings</key>
-	<dict/>
+	<dict>
+		<key>buttonTitle</key>
+		<string>base button</string>
+	</dict>
 	<key>urls</key>
 	<dict/>
 	<key>numbers</key>
@@ -18,22 +21,27 @@
 	<key>fonts</key>
 	<dict>
 		<key>content</key>
-		<string>15</string>
+		<string>12</string>
 		<key>title</key>
-		<string>17</string>
+		<string>15</string>
 	</dict>
 	<key>colors</key>
 	<dict>
 		<key>red</key>
-		<string>rgb(0, 255, 255)</string>
+		<string>rgb(255, 0, 0)</string>
 		<key>yellow</key>
-		<string>rgba(0,  0,  255, 0.8)</string>
+		<string>rgba(255,  255,  0, 0.8)</string>
 		<key>green</key>
-		<string>#f0f</string>
+		<string>#0f0</string>
 		<key>blue</key>
-		<string>#ffff00</string>
+		<string>#0000ff</string>
 	</dict>
 	<key>images</key>
-	<dict/>
+	<dict>
+		<key>icon</key>
+		<string>icon1</string>
+		<key>bg</key>
+		<string>bg1</string>
+	</dict>
 </dict>
 </plist>
