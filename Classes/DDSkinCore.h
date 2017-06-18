@@ -13,5 +13,6 @@
 DDExtern void DDSkinSetCurrentStorage(id<DDSkinStorageProtocol> storage);
 DDExtern id<DDSkinStorageProtocol> DDSkinGetCurrentStorage();
 DDExtern void DDSkinRegisterTargetHandler(NSObject *target, DDSkinHandler *handler, BOOL apply);
+DDExtern void DDSkinUnregisterTargetHandler(NSObject *target, NSString *key);
 DDExtern DDSkinHandler *DDSkinGetTargetHandlerByKey(NSObject *target, NSString *key);
 DDExtern void DDSkinRefreshAllTarget();

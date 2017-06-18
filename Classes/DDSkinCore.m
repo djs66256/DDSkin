@@ -8,6 +8,7 @@
 
 #import "DDSkinCore.h"
 #import <pthread/pthread.h>
+#import "DDSkinManager.h"
 
 static inline NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *DDSkinGetTargetHandlerTable() {
     static NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *g_mapTable;
@@ -74,6 +75,21 @@ void DDSkinRegisterTargetHandler(NSObject *target, DDSkinHandler *handler, BOOL 
     }
 }
 
+void DDSkinUnregisterTargetHandler(NSObject *target, NSString *key) {
+    NSCParameterAssert(target != nil);
+    NSCParameterAssert(key != nil);
+    NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
+    DDSkinTargetHandlerTableLock({
+        NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
+        for (DDSkinHandler *handler in handlerSet) {
+            if ([handler.targetKey isEqualToString:key]) {
+                [handlerSet removeObject:handler];
+                break;
+            }
+        }
+    });
+}
+
 DDSkinHandler *DDSkinGetTargetHandlerByKey(NSObject *target, NSString *key) {
     NSCParameterAssert(target != nil);
     NSCParameterAssert(key != nil);
@@ -97,12 +113,14 @@ void DDSkinRefreshAllTarget() {
     NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
     DDMainThreadRun({
         DDSkinTargetHandlerTableLock({
+            [[NSNotificationCenter defaultCenter] postNotificationName:DDSkinStorageWillChangeNotification object:nil];
             for (NSObject *target in mapTable.keyEnumerator) {
                 NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
                 for (DDSkinHandler *handler in handlerSet) {
                     [handler handleSkinChanged:DDSkinGetCurrentStorage() target:target];
                 }
             }
+            [[NSNotificationCenter defaultCenter] postNotificationName:NSCurrentLocaleDidChangeNotification object:nil];
         });
     });
 }

@@ -30,6 +30,7 @@
         self.sel = [DDSkinGetCurrentStorage() type ## ForKey:key];\
     }\
     else {\
+        DDSkinUnregisterTargetHandler(self, DDSelStr(sel));\
         self.sel = defaultValue;\
     }\
 }
@@ -45,6 +46,7 @@
         self.sel = [[DDSkinGetCurrentStorage() type ## ForKey:key] transform];\
     }\
     else {\
+        DDSkinUnregisterTargetHandler(self, DDSelStr(sel));\
         self.sel = defaultValue;\
     }\
 }
@@ -94,6 +96,7 @@ _DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, number, Numb
                      forState:realState]; \
     }\
     else {\
+        DDSkinUnregisterTargetHandler(self, DDSelStr(state ## upperSel ## SkinKey));\
         [self set ## upperSel:nil forState:realState];\
     }\
 }
