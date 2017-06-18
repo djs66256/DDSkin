@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [self.view setBackgroundColorSkinKey:@"red"];
+    self.view.backgroundColorSkinKey = @"red";
 }
 
 

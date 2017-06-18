@@ -16,6 +16,11 @@
 
 @implementation CustomViewController
 
+- (void)dealloc
+{
+    NSLog(@"test dealloc <CustomViewController>");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
