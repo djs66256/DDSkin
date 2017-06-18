@@ -72,13 +72,43 @@ _DDSkinPropertyDefineDefaultValue(sel ## SkinKey, upperSel ## SkinKey, type, upp
 _DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, type, upperType, sel, transform, defaultValue)
 
 #define DDSkinBooleanPropertyDefine(sel, upperSel, defaultValue) \
-_DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, number, Number, sel, bool, defaultValue)
+DDSkinPropertyDefineDefaultValue(sel, upperSel, boolean, Boolean, defaultValue)
 
 #define DDSkinNumberPropertyDefine(sel, upperSel, numberType) \
 _DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, number, Number, sel, numberType ## Value, 0)
 
 #define DDSkinNumberPropertyDefineDefaultValue(sel, upperSel, numberType, defaultValue) \
 _DDSkinBasicTypePropertyDefine(sel ## SkinKey, upperSel ## SkinKey, number, Number, sel, numberType ## Value, defaultValue)
+
+
+#define _DDSkinControlPropertyDefine(upperSel, state, upperState, realState, type) \
+- (void)set ## upperState ## upperSel ## SkinKey:(NSString *)key { \
+    DDAssertMainThread();\
+    if (key) {\
+        DDSkinHandler *handler = [DDSkinHandler<typeof(self)> \
+                                  handlerWithTargetKey:DDSelStr(state ## upperSel ## SkinKey) \
+                                  storageKey:key \
+                                  block:^(DDSkinHandler *handler, id<DDSkinStorageProtocol> skinStorage, NSObject *target) { \
+                                      [(typeof(self))target set ## upperSel:[skinStorage type ## ForKey:handler.storageKey] \
+                                                                   forState:realState]; \
+                                  }]; \
+        DDSkinRegisterTargetHandler(self, handler, false); \
+        [self set ## upperSel:[DDSkinGetCurrentStorage() type ## ForKey:key] \
+                     forState:realState]; \
+    }\
+    else {\
+        [self set ## upperSel:nil forState:realState];\
+    }\
+}
+
+#define DDSkinControlPropertyDefine1(upperSel, state, upperState, type)\
+_DDSkinPropertyGetterDefine(state ## upperSel ## SkinKey, state ## upperSel ## SkinKey)\
+_DDSkinControlPropertyDefine(upperSel, state, upperState, UIControlState ## upperState, type)
+
+#define DDSkinControlPropertyDefine2(upperSel, state, upperState, realState, type)\
+_DDSkinPropertyGetterDefine(state ## upperSel ## SkinKey, state ## upperSel ## SkinKey)\
+_DDSkinControlPropertyDefine(upperSel, state, upperState, realState, type)
+
 
 
 #endif /* DDSkinUIMacros_h */

@@ -15,8 +15,8 @@
 @end
 
 @interface DDSkinBlockHandler<TargetType: NSObject *> : DDSkinHandler
-@property (copy, nonatomic) void(^block)(id<DDSkinStorageProtocol> skinStorage, NSObject *target);
-- (instancetype)initWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey handler:(void(^)(id<DDSkinStorageProtocol> skinStorage, NSObject *target))handler;
+@property (copy, nonatomic) DDSkinHandlerBlock block;
+- (instancetype)initWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey block:(DDSkinHandlerBlock)block;
 @end
 
 @implementation DDSkinHandler
@@ -36,8 +36,8 @@
 + (instancetype)handlerWithKeyPath:(NSString *)keyPath valueType:(DDSkinHandlerKeyPathValueType)type storageKey:(NSString *)storageKey {
     return [[DDSkinKeyPathHandler alloc] initWithKeyPath:keyPath valueType:type storageKey:storageKey];
 }
-+ (instancetype)handlerWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey handler:(nonnull void (^)(id<DDSkinStorageProtocol>, NSObject *))handler {
-    return [[DDSkinBlockHandler alloc] initWithTargetKey:targetKey storageKey:storageKey handler:handler];
++ (instancetype)handlerWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey block:(nonnull DDSkinHandlerBlock)handler {
+    return [[DDSkinBlockHandler alloc] initWithTargetKey:targetKey storageKey:storageKey block:handler];
 }
 
 @end
@@ -83,13 +83,13 @@
 
 @implementation DDSkinBlockHandler
 
-- (instancetype)initWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey handler:(void (^)(id<DDSkinStorageProtocol>, NSObject *))handler
+- (instancetype)initWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey block:(DDSkinHandlerBlock)block
 {
     self = [super init];
     if (self) {
         _targetKey = [targetKey copy];
         _storageKey = [storageKey copy];
-        _block = handler;
+        _block = block;
     }
     return self;
 }
@@ -97,7 +97,7 @@
 - (void)handleSkinChanged:(id<DDSkinStorageProtocol>)skinStorage target:(NSObject *)target {
     DDAssertMainThread();
     if (self.block) {
-        self.block(skinStorage, target);
+        self.block(self, skinStorage, target);
     }
 }
 

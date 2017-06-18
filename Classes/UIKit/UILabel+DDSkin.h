@@ -10,20 +10,20 @@
 
 @interface UILabel (DDSkin)
 
-@property (strong, nonatomic) NSString *textSkinKey;
-@property (strong, nonatomic) NSString *fontSkinKey;
-@property (strong, nonatomic) NSString *textColorSkinKey;
-@property (strong, nonatomic) NSString *shadowColorSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *textSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *fontSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *textColorSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *shadowColorSkinKey;
 
-@property (strong, nonatomic) NSString *shadowOffsetSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *shadowOffsetSkinKey;
 
-@property (strong, nonatomic) NSString *textAlignmentSkinKey;
-@property (strong, nonatomic) NSString *lineBreakModeSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *textAlignmentSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *lineBreakModeSkinKey;
 
-@property (strong, nonatomic) NSString *highlightedTextColorSkinKey;
-@property (strong, nonatomic) NSString *numberOfLinesSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *highlightedTextColorSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *numberOfLinesSkinKey;
 
-@property (strong, nonatomic) NSString *adjustsFontSizeToFitWidthSkinKey;
-@property (strong, nonatomic) NSString *minimumScaleFactorSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *adjustsFontSizeToFitWidthSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *minimumScaleFactorSkinKey;
 
 @end

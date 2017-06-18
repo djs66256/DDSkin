@@ -26,7 +26,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorKey" value="green"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorSkinKey" value="green"/>
                                 </userDefinedRuntimeAttributes>
                             </view>

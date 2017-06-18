@@ -10,7 +10,7 @@
 
 @interface UIImageView (DDSkin)
 
-@property (strong, nonatomic) NSString *imageSkinKey;
-@property (strong, nonatomic) NSString *highlightedImageSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *imageSkinKey;
+@property (strong, nonatomic) IBInspectable NSString *highlightedImageSkinKey;
 
 @end

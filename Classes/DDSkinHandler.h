@@ -28,13 +28,15 @@ NS_ASSUME_NONNULL_BEGIN
     NSString *_targetKey, *_storageKey;
 }
 
+typedef void(^DDSkinHandlerBlock)(DDSkinHandler *handler, id<DDSkinStorageProtocol> skinStorage, TargetType target);
+
 @property (readonly, copy, nonatomic) NSString *storageKey;
 @property (readonly, copy, nonatomic) NSString *targetKey;      // unique key, use by isEqual:
 
 - (void)handleSkinChanged:(id<DDSkinStorageProtocol>)skinStorage target:(TargetType)target;
 
 + (instancetype)handlerWithKeyPath:(NSString *)keyPath valueType:(DDSkinHandlerKeyPathValueType)type storageKey:(NSString *)storageKey;
-+ (instancetype)handlerWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey handler:(void(^)(id<DDSkinStorageProtocol> skinStorage, TargetType target))handler;
++ (instancetype)handlerWithTargetKey:(NSString *)targetKey storageKey:(NSString *)storageKey block:(DDSkinHandlerBlock)handler;
 
 @end
 

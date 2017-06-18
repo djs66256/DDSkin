@@ -46,6 +46,34 @@
 		652108331EF054E9004F06FF /* UIImageView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108311EF054E9004F06FF /* UIImageView+DDSkin.m */; };
 		652108361EF17EEF004F06FF /* UILabel+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108341EF17EEF004F06FF /* UILabel+DDSkin.h */; };
 		652108371EF17EEF004F06FF /* UILabel+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108351EF17EEF004F06FF /* UILabel+DDSkin.m */; };
+		6521083A1EF184B5004F06FF /* UIButton+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108381EF184B5004F06FF /* UIButton+DDSkin.h */; };
+		6521083B1EF184B5004F06FF /* UIButton+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108391EF184B5004F06FF /* UIButton+DDSkin.m */; };
+		6521083E1EF18699004F06FF /* UITextField+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 6521083C1EF18699004F06FF /* UITextField+DDSkin.h */; };
+		6521083F1EF18699004F06FF /* UITextField+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521083D1EF18699004F06FF /* UITextField+DDSkin.m */; };
+		652108421EF186D2004F06FF /* UITextView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108401EF186D2004F06FF /* UITextView+DDSkin.h */; };
+		652108431EF186D2004F06FF /* UITextView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108411EF186D2004F06FF /* UITextView+DDSkin.m */; };
+		652108461EF186FE004F06FF /* UISlider+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108441EF186FE004F06FF /* UISlider+DDSkin.h */; };
+		652108471EF186FE004F06FF /* UISlider+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108451EF186FE004F06FF /* UISlider+DDSkin.m */; };
+		6521084A1EF18723004F06FF /* UISwitch+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108481EF18723004F06FF /* UISwitch+DDSkin.h */; };
+		6521084B1EF18723004F06FF /* UISwitch+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108491EF18723004F06FF /* UISwitch+DDSkin.m */; };
+		6521084E1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 6521084C1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.h */; };
+		6521084F1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521084D1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.m */; };
+		652108521EF18771004F06FF /* UIProgressView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108501EF18771004F06FF /* UIProgressView+DDSkin.h */; };
+		652108531EF18771004F06FF /* UIProgressView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108511EF18771004F06FF /* UIProgressView+DDSkin.m */; };
+		652108561EF18794004F06FF /* UIPageControl+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108541EF18794004F06FF /* UIPageControl+DDSkin.h */; };
+		652108571EF18794004F06FF /* UIPageControl+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108551EF18794004F06FF /* UIPageControl+DDSkin.m */; };
+		6521085A1EF18868004F06FF /* UITableView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108581EF18868004F06FF /* UITableView+DDSkin.h */; };
+		6521085B1EF18868004F06FF /* UITableView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108591EF18868004F06FF /* UITableView+DDSkin.m */; };
+		6521085E1EF1887B004F06FF /* UITableViewCell+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 6521085C1EF1887B004F06FF /* UITableViewCell+DDSkin.h */; };
+		6521085F1EF1887B004F06FF /* UITableViewCell+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521085D1EF1887B004F06FF /* UITableViewCell+DDSkin.m */; };
+		652108621EF188EC004F06FF /* UIScrollView+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108601EF188EC004F06FF /* UIScrollView+DDSkin.h */; };
+		652108631EF188EC004F06FF /* UIScrollView+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108611EF188EC004F06FF /* UIScrollView+DDSkin.m */; };
+		652108661EF18937004F06FF /* UINavigationBar+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108641EF18937004F06FF /* UINavigationBar+DDSkin.h */; };
+		652108671EF18937004F06FF /* UINavigationBar+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108651EF18937004F06FF /* UINavigationBar+DDSkin.m */; };
+		6521086A1EF18955004F06FF /* UIToolbar+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 652108681EF18955004F06FF /* UIToolbar+DDSkin.h */; };
+		6521086B1EF18955004F06FF /* UIToolbar+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 652108691EF18955004F06FF /* UIToolbar+DDSkin.m */; };
+		6521086E1EF18981004F06FF /* UITabBar+DDSkin.h in Headers */ = {isa = PBXBuildFile; fileRef = 6521086C1EF18981004F06FF /* UITabBar+DDSkin.h */; };
+		6521086F1EF18981004F06FF /* UITabBar+DDSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6521086D1EF18981004F06FF /* UITabBar+DDSkin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +145,34 @@
 		652108311EF054E9004F06FF /* UIImageView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DDSkin.m"; sourceTree = "<group>"; };
 		652108341EF17EEF004F06FF /* UILabel+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DDSkin.h"; sourceTree = "<group>"; };
 		652108351EF17EEF004F06FF /* UILabel+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DDSkin.m"; sourceTree = "<group>"; };
+		652108381EF184B5004F06FF /* UIButton+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDSkin.h"; sourceTree = "<group>"; };
+		652108391EF184B5004F06FF /* UIButton+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDSkin.m"; sourceTree = "<group>"; };
+		6521083C1EF18699004F06FF /* UITextField+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DDSkin.h"; sourceTree = "<group>"; };
+		6521083D1EF18699004F06FF /* UITextField+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DDSkin.m"; sourceTree = "<group>"; };
+		652108401EF186D2004F06FF /* UITextView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+DDSkin.h"; sourceTree = "<group>"; };
+		652108411EF186D2004F06FF /* UITextView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DDSkin.m"; sourceTree = "<group>"; };
+		652108441EF186FE004F06FF /* UISlider+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+DDSkin.h"; sourceTree = "<group>"; };
+		652108451EF186FE004F06FF /* UISlider+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+DDSkin.m"; sourceTree = "<group>"; };
+		652108481EF18723004F06FF /* UISwitch+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+DDSkin.h"; sourceTree = "<group>"; };
+		652108491EF18723004F06FF /* UISwitch+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+DDSkin.m"; sourceTree = "<group>"; };
+		6521084C1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+DDSkin.h"; sourceTree = "<group>"; };
+		6521084D1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+DDSkin.m"; sourceTree = "<group>"; };
+		652108501EF18771004F06FF /* UIProgressView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+DDSkin.h"; sourceTree = "<group>"; };
+		652108511EF18771004F06FF /* UIProgressView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+DDSkin.m"; sourceTree = "<group>"; };
+		652108541EF18794004F06FF /* UIPageControl+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageControl+DDSkin.h"; sourceTree = "<group>"; };
+		652108551EF18794004F06FF /* UIPageControl+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageControl+DDSkin.m"; sourceTree = "<group>"; };
+		652108581EF18868004F06FF /* UITableView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DDSkin.h"; sourceTree = "<group>"; };
+		652108591EF18868004F06FF /* UITableView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DDSkin.m"; sourceTree = "<group>"; };
+		6521085C1EF1887B004F06FF /* UITableViewCell+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+DDSkin.h"; sourceTree = "<group>"; };
+		6521085D1EF1887B004F06FF /* UITableViewCell+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+DDSkin.m"; sourceTree = "<group>"; };
+		652108601EF188EC004F06FF /* UIScrollView+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DDSkin.h"; sourceTree = "<group>"; };
+		652108611EF188EC004F06FF /* UIScrollView+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DDSkin.m"; sourceTree = "<group>"; };
+		652108641EF18937004F06FF /* UINavigationBar+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+DDSkin.h"; sourceTree = "<group>"; };
+		652108651EF18937004F06FF /* UINavigationBar+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+DDSkin.m"; sourceTree = "<group>"; };
+		652108681EF18955004F06FF /* UIToolbar+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+DDSkin.h"; sourceTree = "<group>"; };
+		652108691EF18955004F06FF /* UIToolbar+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+DDSkin.m"; sourceTree = "<group>"; };
+		6521086C1EF18981004F06FF /* UITabBar+DDSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+DDSkin.h"; sourceTree = "<group>"; };
+		6521086D1EF18981004F06FF /* UITabBar+DDSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+DDSkin.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +289,34 @@
 				652108311EF054E9004F06FF /* UIImageView+DDSkin.m */,
 				652108341EF17EEF004F06FF /* UILabel+DDSkin.h */,
 				652108351EF17EEF004F06FF /* UILabel+DDSkin.m */,
+				652108381EF184B5004F06FF /* UIButton+DDSkin.h */,
+				652108391EF184B5004F06FF /* UIButton+DDSkin.m */,
+				6521083C1EF18699004F06FF /* UITextField+DDSkin.h */,
+				6521083D1EF18699004F06FF /* UITextField+DDSkin.m */,
+				652108401EF186D2004F06FF /* UITextView+DDSkin.h */,
+				652108411EF186D2004F06FF /* UITextView+DDSkin.m */,
+				652108441EF186FE004F06FF /* UISlider+DDSkin.h */,
+				652108451EF186FE004F06FF /* UISlider+DDSkin.m */,
+				652108481EF18723004F06FF /* UISwitch+DDSkin.h */,
+				652108491EF18723004F06FF /* UISwitch+DDSkin.m */,
+				6521084C1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.h */,
+				6521084D1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.m */,
+				652108501EF18771004F06FF /* UIProgressView+DDSkin.h */,
+				652108511EF18771004F06FF /* UIProgressView+DDSkin.m */,
+				652108541EF18794004F06FF /* UIPageControl+DDSkin.h */,
+				652108551EF18794004F06FF /* UIPageControl+DDSkin.m */,
+				652108581EF18868004F06FF /* UITableView+DDSkin.h */,
+				652108591EF18868004F06FF /* UITableView+DDSkin.m */,
+				6521085C1EF1887B004F06FF /* UITableViewCell+DDSkin.h */,
+				6521085D1EF1887B004F06FF /* UITableViewCell+DDSkin.m */,
+				652108601EF188EC004F06FF /* UIScrollView+DDSkin.h */,
+				652108611EF188EC004F06FF /* UIScrollView+DDSkin.m */,
+				652108641EF18937004F06FF /* UINavigationBar+DDSkin.h */,
+				652108651EF18937004F06FF /* UINavigationBar+DDSkin.m */,
+				652108681EF18955004F06FF /* UIToolbar+DDSkin.h */,
+				652108691EF18955004F06FF /* UIToolbar+DDSkin.m */,
+				6521086C1EF18981004F06FF /* UITabBar+DDSkin.h */,
+				6521086D1EF18981004F06FF /* UITabBar+DDSkin.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -261,20 +345,34 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652108561EF18794004F06FF /* UIPageControl+DDSkin.h in Headers */,
+				6521086E1EF18981004F06FF /* UITabBar+DDSkin.h in Headers */,
 				6521081F1EEDD9D0004F06FF /* DDSkinDefaultStorageParser.h in Headers */,
+				652108421EF186D2004F06FF /* UITextView+DDSkin.h in Headers */,
+				652108521EF18771004F06FF /* UIProgressView+DDSkin.h in Headers */,
 				652108041EED3B05004F06FF /* DDSkinHandler.h in Headers */,
 				652107B51EEC59E0004F06FF /* DDSkin.h in Headers */,
+				652108461EF186FE004F06FF /* UISlider+DDSkin.h in Headers */,
+				652108621EF188EC004F06FF /* UIScrollView+DDSkin.h in Headers */,
 				6521082D1EF04B05004F06FF /* CALayer+DDSkin.h in Headers */,
 				652108361EF17EEF004F06FF /* UILabel+DDSkin.h in Headers */,
 				652108061EED3B05004F06FF /* DDSkinMacros.h in Headers */,
+				6521085A1EF18868004F06FF /* UITableView+DDSkin.h in Headers */,
 				652108251EEDDA19004F06FF /* DDSkinStorageImageItem.h in Headers */,
+				6521083A1EF184B5004F06FF /* UIButton+DDSkin.h in Headers */,
+				6521086A1EF18955004F06FF /* UIToolbar+DDSkin.h in Headers */,
 				652108321EF054E9004F06FF /* UIImageView+DDSkin.h in Headers */,
+				6521083E1EF18699004F06FF /* UITextField+DDSkin.h in Headers */,
 				652108021EED3B05004F06FF /* DDSkinCore.h in Headers */,
 				6521080B1EED3B05004F06FF /* UIView+DDSkin.h in Headers */,
 				652108211EEDD9D0004F06FF /* DDSkinStorage.h in Headers */,
 				652108071EED3B05004F06FF /* DDSkinManager.h in Headers */,
+				6521084A1EF18723004F06FF /* UISwitch+DDSkin.h in Headers */,
+				652108661EF18937004F06FF /* UINavigationBar+DDSkin.h in Headers */,
 				652108291EF043B2004F06FF /* DDSkinStorageParserHelper.h in Headers */,
+				6521084E1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.h in Headers */,
 				6521081D1EEDD9D0004F06FF /* DDSkinDefaultStorage.h in Headers */,
+				6521085E1EF1887B004F06FF /* UITableViewCell+DDSkin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,18 +492,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6521083F1EF18699004F06FF /* UITextField+DDSkin.m in Sources */,
 				652108031EED3B05004F06FF /* DDSkinCore.m in Sources */,
 				652108051EED3B05004F06FF /* DDSkinHandler.m in Sources */,
+				6521084B1EF18723004F06FF /* UISwitch+DDSkin.m in Sources */,
+				6521085F1EF1887B004F06FF /* UITableViewCell+DDSkin.m in Sources */,
 				6521081E1EEDD9D0004F06FF /* DDSkinDefaultStorage.m in Sources */,
+				652108671EF18937004F06FF /* UINavigationBar+DDSkin.m in Sources */,
+				652108631EF188EC004F06FF /* UIScrollView+DDSkin.m in Sources */,
+				6521086F1EF18981004F06FF /* UITabBar+DDSkin.m in Sources */,
+				652108571EF18794004F06FF /* UIPageControl+DDSkin.m in Sources */,
 				6521082A1EF043B2004F06FF /* DDSkinStorageParserHelper.m in Sources */,
+				652108471EF186FE004F06FF /* UISlider+DDSkin.m in Sources */,
+				6521086B1EF18955004F06FF /* UIToolbar+DDSkin.m in Sources */,
 				652108201EEDD9D0004F06FF /* DDSkinDefaultStorageParser.m in Sources */,
 				652108371EF17EEF004F06FF /* UILabel+DDSkin.m in Sources */,
 				6521080C1EED3B05004F06FF /* UIView+DDSkin.m in Sources */,
 				652108081EED3B05004F06FF /* DDSkinManager.m in Sources */,
 				652108221EEDD9D0004F06FF /* DDSkinStorage.m in Sources */,
+				6521084F1EF1874D004F06FF /* UIActivityIndicatorView+DDSkin.m in Sources */,
+				6521085B1EF18868004F06FF /* UITableView+DDSkin.m in Sources */,
+				652108431EF186D2004F06FF /* UITextView+DDSkin.m in Sources */,
 				6521082E1EF04B05004F06FF /* CALayer+DDSkin.m in Sources */,
+				652108531EF18771004F06FF /* UIProgressView+DDSkin.m in Sources */,
 				652108261EEDDA19004F06FF /* DDSkinStorageImageItem.m in Sources */,
 				652108331EF054E9004F06FF /* UIImageView+DDSkin.m in Sources */,
+				6521083B1EF184B5004F06FF /* UIButton+DDSkin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
