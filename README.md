@@ -5,7 +5,12 @@ Change the app's whole style. Like night version. Without objc runtime and metho
 
 ![](./Images/skin.gif?raw=true)
 
-# Install
+# Requirements
+
+* Xcode 8.0+
+* iOS 8.0+
+
+# Installation
 
 ```
 github DDSkin
