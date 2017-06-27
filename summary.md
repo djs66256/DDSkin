@@ -68,6 +68,47 @@
 
 提供了c和oc两种接口，使用c是为了减少消息调用开销，实际情况应该也不会有太大影响。
 
+```c
+// 注册配置项
+void DDSkinRegisterTargetHandler(NSObject *target, DDSkinHandler *handler, BOOL apply) {
+    NSCParameterAssert(target != nil);
+    NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
+    DDSkinTargetHandlerTableWriteLock({
+        NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
+        if (handlerSet == nil) {
+            handlerSet = [[NSMutableSet alloc] init];
+            [mapTable setObject:handlerSet forKey:target];
+        }
+        [handlerSet addObject:handler];
+    });
+    if (apply) {
+        // When apply is true, must call at main thread?
+        // Usually apply is on the UI thread.
+        // So we make it must be on the main thread!
+        DDCAssertMainThread();
+        DDMainThreadRun({
+            [handler handleSkinChanged:DDSkinGetCurrentStorage() target:target];
+        });
+    }
+}
+// 更新配置
+void DDSkinRefreshAllTarget() {
+    NSMapTable<NSObject *, NSMutableSet<DDSkinHandler *> *> *mapTable = DDSkinGetTargetHandlerTable();
+    DDMainThreadRun({
+        [[NSNotificationCenter defaultCenter] postNotificationName:DDSkinStorageWillChangeNotification object:nil];
+        DDSkinTargetHandlerTableReadLock({
+            for (NSObject *target in mapTable.keyEnumerator) {
+                NSMutableSet<DDSkinHandler *> *handlerSet = [mapTable objectForKey:target];
+                for (DDSkinHandler *handler in handlerSet) {
+                    [handler handleSkinChanged:DDSkinGetCurrentStorage() target:target];
+                }
+            }
+        });
+        [[NSNotificationCenter defaultCenter] postNotificationName:NSCurrentLocaleDidChangeNotification object:nil];
+    });
+}
+```
+
 #### handler
 
 为了保证通用性和可扩展性，这里默认提供了两种实现。keyPath和block。keyPath使用的是setValue接口，属于上层接口，并不涉及oc底层，所以可以支持swift原生类。同时block提供了一种更为灵活的方案。
@@ -123,6 +164,7 @@
         DDSkinRegisterTargetHandler(self, handler, true);
     }
     else {
+        DDSkinUnregisterTargetHandler(self, DDSelStr(backgroundColor));
         self.backgroundColor = nil;
     }
 }
