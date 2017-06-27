@@ -70,3 +70,8 @@ self.view.backgroundColorSkinKey = @"red";
     }
 }
 ```
+
+
+# More Info
+
+[做更好的换肤框架](./summary.md)
