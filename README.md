@@ -76,3 +76,7 @@ Images are lazy load。
     }
 }
 ```
+
+# More Info
+
+[做更好的换肤框架](./summary.md)
