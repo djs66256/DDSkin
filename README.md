@@ -24,7 +24,7 @@ pod 'DDSkin'
 
 Property set by `String` key.
 
-if you are using IB or StoryBoard，it's easy to config.
+If you are using IB or StoryBoard，it's easy to config.
 
 ![](./Images/ib.png?raw=true)
 
@@ -45,7 +45,7 @@ Images are lazy load。
 
 ![](./Images/plist.png?raw=true)
 
-# extension
+# Extension
 
 ```objc
 #pragma mark - OC API
